@@ -4,13 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Al’s Detailing & Commercial Cleaning | Fort Wayne, Indiana</title>
+  <title>Al’s Detailing | Mobile Auto Detailing & Dealership Lot Services in Fort Wayne, Indiana</title>
 
   <style>
     :root {
       --black: #050505;
       --black-soft: #0a0a0a;
-      --black-card: #111111;
       --crimson: #d50a0a;
       --crimson-dark: #8f0707;
       --crimson-light: #ff4b4b;
@@ -18,7 +17,6 @@
       --gray: #bfbfbf;
       --muted: #8f8f8f;
       --border: rgba(255, 255, 255, 0.12);
-      --glass: rgba(255, 255, 255, 0.055);
       --shadow: 0 35px 90px rgba(0, 0, 0, 0.55);
     }
 
@@ -55,13 +53,11 @@
       margin: 0 auto;
     }
 
-    /* HEADER */
-
     header {
       position: fixed;
       inset: 0 0 auto 0;
       z-index: 1000;
-      background: rgba(5, 5, 5, 0.82);
+      background: rgba(5, 5, 5, 0.84);
       backdrop-filter: blur(16px);
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
@@ -109,7 +105,7 @@
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 22px;
+      gap: 20px;
       font-size: 0.9rem;
       color: #d7d7d7;
     }
@@ -132,8 +128,6 @@
       transform: translateY(-2px);
       box-shadow: 0 18px 40px rgba(213, 10, 10, 0.42);
     }
-
-    /* GLOBAL */
 
     section {
       padding: 105px 0;
@@ -261,8 +255,6 @@
       font-weight: 900;
       margin-right: 8px;
     }
-
-    /* HERO */
 
     .hero {
       min-height: 100vh;
@@ -433,8 +425,13 @@
     }
 
     @keyframes shine {
-      0% { left: -70%; }
-      45%, 100% { left: 130%; }
+      0% {
+        left: -70%;
+      }
+
+      45%, 100% {
+        left: 130%;
+      }
     }
 
     .floating-badge {
@@ -470,7 +467,7 @@
     }
 
     .image-missing::before {
-      content: "Upload your hero image: images/black-challenger-waterdrops.jpg";
+      content: "Upload image to: images/black-challenger-waterdrops.jpg";
       position: absolute;
       inset: 0;
       display: grid;
@@ -485,18 +482,20 @@
       z-index: 1;
     }
 
-    /* SERVICES */
-
     .services {
       background: var(--black-soft);
     }
-
-    /* PACKAGES */
 
     .packages {
       background:
         radial-gradient(circle at 50% 0%, rgba(213, 10, 10, 0.16), transparent 35%),
         #070707;
+    }
+
+    .dealer {
+      background:
+        radial-gradient(circle at 18% 0%, rgba(213, 10, 10, 0.16), transparent 32%),
+        #0a0a0a;
     }
 
     .package-card {
@@ -557,14 +556,6 @@
       margin-top: 22px;
       width: 100%;
     }
-
-    .commercial {
-      background:
-        radial-gradient(circle at 18% 0%, rgba(213, 10, 10, 0.16), transparent 32%),
-        #0a0a0a;
-    }
-
-    /* PROCESS */
 
     .process-grid {
       display: grid;
@@ -631,8 +622,6 @@
       font-size: 0.96rem;
     }
 
-    /* GALLERY */
-
     .gallery-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -660,8 +649,13 @@
     }
 
     @keyframes galleryShine {
-      0%, 40% { transform: translateX(-100%); }
-      70%, 100% { transform: translateX(100%); }
+      0%, 40% {
+        transform: translateX(-100%);
+      }
+
+      70%, 100% {
+        transform: translateX(100%);
+      }
     }
 
     .gallery-item::after {
@@ -673,12 +667,12 @@
       font-size: 0.9rem;
     }
 
-    .gallery-item:nth-child(1)::after { content: "Auto Detail"; }
+    .gallery-item:nth-child(1)::after { content: "Personal Auto Detail"; }
     .gallery-item:nth-child(2)::after { content: "Interior Reset"; }
     .gallery-item:nth-child(3)::after { content: "Exterior Shine"; }
-    .gallery-item:nth-child(4)::after { content: "Commercial Clean"; }
-    .gallery-item:nth-child(5)::after { content: "Fleet Ready"; }
-    .gallery-item:nth-child(6)::after { content: "Office Cleaning"; }
+    .gallery-item:nth-child(4)::after { content: "Dealer Lot Ready"; }
+    .gallery-item:nth-child(5)::after { content: "Fleet Vehicles"; }
+    .gallery-item:nth-child(6)::after { content: "Inventory Prep"; }
     .gallery-item:nth-child(7)::after { content: "Final Finish"; }
 
     .gallery-item.tall {
@@ -689,8 +683,6 @@
     .gallery-item.wide {
       grid-column: span 2;
     }
-
-    /* REVIEWS */
 
     .reviews {
       background: var(--black-soft);
@@ -706,8 +698,6 @@
       color: var(--crimson-light);
       font-weight: 900;
     }
-
-    /* CTA */
 
     .cta {
       padding: 120px 0;
@@ -735,8 +725,6 @@
       font-size: 1.08rem;
       margin-bottom: 32px;
     }
-
-    /* CONTACT */
 
     .contact-grid {
       display: grid;
@@ -858,11 +846,14 @@
     }
 
     @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-7px); }
-    }
+      0%, 100% {
+        transform: translateY(0);
+      }
 
-    /* RESPONSIVE */
+      50% {
+        transform: translateY(-7px);
+      }
+    }
 
     @media (max-width: 980px) {
       .nav-links {
@@ -958,15 +949,16 @@
         <div class="logo-mark">AL</div>
         <div class="logo-text">
           Al’s Detailing
-          <span>& Commercial Cleaning</span>
+          <span>Mobile Detailing & Dealership Services</span>
         </div>
       </a>
 
       <nav class="nav-links">
         <a href="#services">Services</a>
         <a href="#packages">Detailing Packages</a>
-        <a href="#commercial-cleaning">Commercial Cleaning</a>
+        <a href="#dealership-services">Dealership Services</a>
         <a href="#process">Process</a>
+        <a href="#gallery">Work</a>
         <a href="#contact" class="nav-cta">Book Now</a>
       </nav>
     </div>
@@ -976,26 +968,25 @@
 
   <main>
 
-    <!-- HERO -->
     <section class="hero" id="home">
       <div class="container hero-grid">
         <div>
           <div class="eyebrow">
             <span class="pulse"></span>
-            Fort Wayne Auto Detailing & Commercial Cleaning
+            Fort Wayne Mobile Auto Detailing & Lot Services
           </div>
 
-          <h1>Clean vehicles. <span>Cleaner businesses.</span></h1>
+          <h1>Clean cars. <span>Lot-ready inventory.</span></h1>
 
           <p>
-            Al’s Detailing & Commercial Cleaning provides premium mobile auto detailing and reliable commercial
-            cleaning services across Fort Wayne, Indiana. From water-bead shine and spotless interiors to clean
-            workspaces and business-ready facilities, we help vehicles and businesses make a stronger first impression.
+            Al’s Detailing provides premium mobile auto detailing and high-volume vehicle cleaning services across
+            Fort Wayne, Indiana. From personal vehicles and blacktop-ready shine to dealership inventory,
+            fleet vehicles, and staged car lots, we help every vehicle look clean, sharp, and ready to move.
           </p>
 
           <div class="hero-buttons">
             <a href="#contact" class="btn btn-primary">Request Service</a>
-            <a href="#packages" class="btn btn-secondary">View Packages</a>
+            <a href="#dealership-services" class="btn btn-secondary">Dealership Services</a>
           </div>
 
           <div class="hero-stats">
@@ -1005,13 +996,13 @@
             </div>
 
             <div class="stat">
-              <strong>Business</strong>
-              <span>Commercial cleaning support</span>
+              <strong>Dealer Lots</strong>
+              <span>Inventory cleaning and prep</span>
             </div>
 
             <div class="stat">
-              <strong>Fort Wayne</strong>
-              <span>Local service you can call</span>
+              <strong>Fleet</strong>
+              <span>Bulk vehicle cleaning options</span>
             </div>
           </div>
         </div>
@@ -1041,15 +1032,14 @@
       </div>
     </section>
 
-    <!-- SERVICES -->
     <section class="services" id="services">
       <div class="container">
         <div class="section-heading">
           <div class="section-label">What We Do</div>
-          <h2>One brand for clean cars, clean fleets, and clean commercial spaces.</h2>
+          <h2>One detailing brand for personal cars, dealership lots, and staged vehicle groups.</h2>
           <p>
-            Al’s combines mobile detailing and commercial cleaning under one simple promise:
-            make the things your customers see look sharp, professional, and ready.
+            Al’s Detailing keeps vehicles looking sharp whether it is one customer car,
+            a row of dealership inventory, or a large group of vehicles staged at a lot.
           </p>
         </div>
 
@@ -1068,32 +1058,31 @@
 
           <div class="card">
             <div class="icon">◆</div>
-            <h3>Commercial Cleaning</h3>
-            <p>Reliable cleaning services for businesses that need their space to look professional.</p>
+            <h3>Dealership Lot Detailing</h3>
+            <p>Vehicle cleaning support for dealerships, used car lots, and staged inventory.</p>
             <ul>
-              <li>Office cleaning</li>
-              <li>Restroom cleaning</li>
-              <li>Trash removal</li>
-              <li>Floor and surface cleaning</li>
+              <li>Inventory vehicle washdowns</li>
+              <li>Interior refreshes</li>
+              <li>Lot-ready exterior shine</li>
+              <li>Fast turnaround for multiple vehicles</li>
             </ul>
           </div>
 
           <div class="card">
             <div class="icon">★</div>
-            <h3>Fleet & Business Services</h3>
-            <p>Cleaning support for companies that need vehicles and facilities maintained.</p>
+            <h3>Fleet & Bulk Vehicle Services</h3>
+            <p>Cleaning solutions for businesses with multiple vehicles that need consistent presentation.</p>
             <ul>
               <li>Fleet vehicle detailing</li>
-              <li>Small business cleaning</li>
+              <li>Rental and company vehicles</li>
+              <li>Auction and staged vehicles</li>
               <li>Recurring service options</li>
-              <li>Custom cleaning plans</li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- AUTO DETAILING PACKAGES -->
     <section class="packages" id="packages">
       <div class="container">
         <div class="section-heading center">
@@ -1174,91 +1163,89 @@
       </div>
     </section>
 
-    <!-- COMMERCIAL CLEANING -->
-    <section class="commercial" id="commercial-cleaning">
+    <section class="dealer" id="dealership-services">
       <div class="container">
         <div class="section-heading center">
-          <div class="section-label">Commercial Cleaning</div>
-          <h2>Clean spaces that help businesses look ready.</h2>
+          <div class="section-label">Dealership & Fleet Services</div>
+          <h2>Keep every vehicle on the lot looking ready to sell.</h2>
           <p>
-            Al’s Commercial Cleaning services are built for offices, small businesses, shops, suites,
-            commercial spaces, and companies that need reliable cleaning support across Fort Wayne and surrounding areas.
+            Al’s Detailing provides lot-ready vehicle cleaning for dealerships, used car lots,
+            rental fleets, auction vehicles, company vehicles, and staged inventory across
+            Fort Wayne and surrounding areas.
           </p>
         </div>
 
         <div class="cards">
           <div class="card package-card">
-            <span class="tag">Basic</span>
-            <h3>Standard Business Clean</h3>
-            <div class="price">Quote-Based <span>/ visit</span></div>
-            <p>Best for routine cleaning and professional upkeep.</p>
+            <span class="tag">Lot Refresh</span>
+            <h3>Inventory Washdown</h3>
+            <div class="price">Quote-Based <span>/ vehicle or lot</span></div>
+            <p>Best for dealerships and lots that need vehicles cleaned and presentable.</p>
 
             <ul>
-              <li>Trash removal</li>
-              <li>Surface wiping</li>
-              <li>Restroom cleaning</li>
-              <li>Floor sweeping or vacuuming</li>
-              <li>Entryway refresh</li>
-              <li>Light dusting</li>
-              <li>Break area wipe down</li>
+              <li>Exterior washdown</li>
+              <li>Window cleaning</li>
+              <li>Wheel face cleaning</li>
+              <li>Light interior wipe down</li>
+              <li>Quick vacuum option</li>
+              <li>Lot-ready presentation</li>
             </ul>
 
-            <p class="package-note">Great for small offices, storefronts, suites, and local businesses.</p>
-            <a href="#contact" class="btn btn-secondary package-btn">Request Quote</a>
+            <p class="package-note">Ideal for used car lots, dealership rows, and staged inventory.</p>
+            <a href="#contact" class="btn btn-secondary package-btn">Request Lot Quote</a>
           </div>
 
           <div class="card package-card featured">
             <span class="tag">Most Popular</span>
-            <h3>Recurring Commercial Clean</h3>
-            <div class="price">Custom Plan <span>/ weekly or monthly</span></div>
-            <p>Best for businesses that need consistent cleaning on a set schedule.</p>
+            <h3>Dealership Detail Program</h3>
+            <div class="price">Custom Plan <span>/ recurring service</span></div>
+            <p>Best for dealerships that need consistent cleaning support on a schedule.</p>
 
             <ul>
-              <li>Everything in Standard Clean</li>
-              <li>Scheduled weekly or monthly service</li>
-              <li>Breakroom cleaning</li>
-              <li>High-touch surface cleaning</li>
-              <li>Restroom restocking support</li>
-              <li>Custom checklist by location</li>
-              <li>Ongoing quality check-ins</li>
+              <li>Recurring lot service</li>
+              <li>Multiple vehicles cleaned per visit</li>
+              <li>Interior refresh options</li>
+              <li>Exterior shine service</li>
+              <li>Priority vehicle prep</li>
+              <li>Custom checklist by dealership</li>
+              <li>Flexible service volume</li>
             </ul>
 
-            <p class="package-note">Best for companies that want the space to stay clean without thinking about it.</p>
-            <a href="#contact" class="btn btn-primary package-btn">Request Plan</a>
+            <p class="package-note">Built for dealerships that want inventory looking ready every week.</p>
+            <a href="#contact" class="btn btn-primary package-btn">Request Program</a>
           </div>
 
           <div class="card package-card">
-            <span class="tag">Deep Clean</span>
-            <h3>Commercial Deep Cleaning</h3>
+            <span class="tag">Bulk Service</span>
+            <h3>Fleet & Staged Vehicle Cleaning</h3>
             <div class="price">Quote-Based <span>/ project</span></div>
-            <p>Best for move-ins, move-outs, seasonal resets, or spaces needing extra attention.</p>
+            <p>Best for companies, auctions, rentals, and businesses with multiple vehicles.</p>
 
             <ul>
-              <li>Detailed surface cleaning</li>
-              <li>Baseboards and edges</li>
-              <li>Interior glass cleaning</li>
-              <li>Restroom deep clean</li>
-              <li>Floor detail attention</li>
-              <li>High-touch area cleaning</li>
-              <li>Final walkthrough</li>
+              <li>Fleet vehicle cleaning</li>
+              <li>Auction vehicle prep</li>
+              <li>Rental vehicle refresh</li>
+              <li>Company vehicle cleaning</li>
+              <li>Bulk wash and detail options</li>
+              <li>On-site service available</li>
+              <li>Final vehicle presentation check</li>
             </ul>
 
-            <p class="package-note">Strong choice for business openings, turnovers, inspections, and reset projects.</p>
-            <a href="#contact" class="btn btn-secondary package-btn">Request Deep Clean</a>
+            <p class="package-note">Strong option for lots, fleets, auctions, and staged vehicle groups.</p>
+            <a href="#contact" class="btn btn-secondary package-btn">Request Fleet Quote</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- PROCESS -->
     <section id="process">
       <div class="container process-grid">
         <div class="process-panel">
           <div class="section-label">Our Process</div>
-          <h3>Simple booking. Clear service. Clean results.</h3>
+          <h3>Simple booking. Clear service. Clean vehicles.</h3>
           <p>
-            Whether you need a personal vehicle detailed, a fleet cleaned, or a business space maintained,
-            Al’s makes the process easy from first contact to final walkthrough.
+            Whether you need one personal vehicle detailed or a large group of staged vehicles cleaned,
+            Al’s makes the process easy from first contact to final walkaround.
           </p>
           <a href="#contact" class="btn btn-primary">Schedule Service</a>
         </div>
@@ -1268,46 +1255,45 @@
             <div class="step-number">1</div>
             <div>
               <h4>Request Your Service</h4>
-              <p>Choose auto detailing, commercial cleaning, fleet service, or a custom cleaning request.</p>
+              <p>Choose personal auto detailing, dealership lot cleaning, fleet service, or a custom bulk vehicle request.</p>
             </div>
           </div>
 
           <div class="step">
             <div class="step-number">2</div>
             <div>
-              <h4>Confirm Details</h4>
-              <p>We confirm your vehicle, space, location, service needs, schedule, and any condition-based details.</p>
+              <h4>Confirm Vehicle Count & Location</h4>
+              <p>We confirm the number of vehicles, service location, condition, schedule, and level of cleaning needed.</p>
             </div>
           </div>
 
           <div class="step">
             <div class="step-number">3</div>
             <div>
-              <h4>Professional Cleaning</h4>
-              <p>Your vehicle or commercial space receives a focused cleaning process based on your selected service.</p>
+              <h4>On-Site Vehicle Cleaning</h4>
+              <p>Your vehicle or inventory group receives a focused cleaning process based on your selected service.</p>
             </div>
           </div>
 
           <div class="step">
             <div class="step-number">4</div>
             <div>
-              <h4>Final Walkthrough</h4>
-              <p>We finish with a quality check so the final result looks clean, sharp, and ready.</p>
+              <h4>Final Presentation Check</h4>
+              <p>We finish with a quality check so every vehicle looks clean, sharp, and ready for customers.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- GALLERY -->
     <section class="services" id="gallery">
       <div class="container">
         <div class="section-heading center">
           <div class="section-label">Our Work</div>
-          <h2>From vehicle shine to business-ready spaces.</h2>
+          <h2>From personal details to lot-ready vehicle groups.</h2>
           <p>
             Replace these blocks with real before-and-after photos once you have them.
-            Add car details, fleet photos, office cleaning results, and commercial space transformations.
+            Add personal car details, dealership inventory rows, fleet photos, and staged vehicle transformations.
           </p>
         </div>
 
@@ -1323,7 +1309,6 @@
       </div>
     </section>
 
-    <!-- REVIEWS -->
     <section class="reviews">
       <div class="container">
         <div class="section-heading center">
@@ -1351,21 +1336,20 @@
 
           <div class="card review-card">
             <p>
-              “The convenience and quality made it an easy choice for our cleaning needs.”
+              “The lot looked cleaner and the vehicles were ready for customers faster.”
             </p>
-            <div class="review-name">— Local Business Client</div>
+            <div class="review-name">— Dealership Client</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CTA -->
     <section class="cta">
       <div class="container cta-box">
-        <h2>Fort Wayne, keep it clean.</h2>
+        <h2>Fort Wayne, keep every vehicle ready.</h2>
         <p>
-          Book Al’s Detailing & Commercial Cleaning for mobile auto detailing, commercial cleaning,
-          fleet cleaning, and clean results that help you make a bold first impression.
+          Book Al’s Detailing for mobile auto detailing, dealership inventory cleaning,
+          fleet vehicle service, and lot-ready results that help every vehicle make a stronger first impression.
         </p>
 
         <div class="hero-buttons" style="justify-content: center;">
@@ -1375,16 +1359,15 @@
       </div>
     </section>
 
-    <!-- CONTACT -->
     <section id="contact">
       <div class="container contact-grid">
         <div>
           <div class="section-heading">
             <div class="section-label">Book Now</div>
-            <h2>Ready for a better clean?</h2>
+            <h2>Ready for cleaner vehicles?</h2>
             <p>
               Send your information and Al’s will follow up to confirm your service,
-              location, package, quote needs, and appointment time.
+              vehicle count, location, package, quote needs, and appointment time.
             </p>
           </div>
 
@@ -1401,7 +1384,7 @@
 
             <div class="info-box">
               <strong>Services</strong>
-              <span>Mobile auto detailing, fleet detailing, office cleaning, and commercial cleaning</span>
+              <span>Mobile auto detailing, dealership lot detailing, fleet cleaning, and staged vehicle cleaning</span>
             </div>
 
             <div class="info-box">
@@ -1425,7 +1408,7 @@
 
             <div class="field">
               <label for="vehicle">Vehicle / Business Type</label>
-              <input id="vehicle" type="text" placeholder="Car, SUV, office, shop, suite, etc." />
+              <input id="vehicle" type="text" placeholder="Car, SUV, dealership, fleet, lot, etc." />
             </div>
 
             <div class="field">
@@ -1434,17 +1417,17 @@
                 <option>Auto Detailing - Tier 1 Basic Wash & Interior Refresh</option>
                 <option>Auto Detailing - Tier 2 Premium Full Detail</option>
                 <option>Auto Detailing - Tier 3 Showroom Deep Detail</option>
-                <option>Commercial Cleaning - Standard Business Clean</option>
-                <option>Commercial Cleaning - Recurring Cleaning Plan</option>
-                <option>Commercial Cleaning - Deep Clean</option>
-                <option>Fleet & Business Cleaning Services</option>
+                <option>Dealership Services - Inventory Washdown</option>
+                <option>Dealership Services - Recurring Lot Detail Program</option>
+                <option>Fleet Services - Bulk Vehicle Cleaning</option>
+                <option>Auction / Rental / Staged Vehicle Cleaning</option>
                 <option>Not Sure Yet</option>
               </select>
             </div>
 
             <div class="field full">
               <label for="message">Message</label>
-              <textarea id="message" placeholder="Tell us about the vehicle or business space, condition, location, and preferred appointment time."></textarea>
+              <textarea id="message" placeholder="Tell us about the vehicle, dealership lot, fleet, number of cars, condition, location, and preferred appointment time."></textarea>
             </div>
 
             <div class="full">
@@ -1459,8 +1442,8 @@
 
   <footer>
     <div class="container footer-flex">
-      <div>© 2026 Al’s Detailing & Commercial Cleaning. All rights reserved.</div>
-      <div>Fort Wayne, Indiana Auto Detailing & Commercial Cleaning</div>
+      <div>© 2026 Al’s Detailing. All rights reserved.</div>
+      <div>Fort Wayne, Indiana Auto Detailing & Dealership Lot Services</div>
     </div>
   </footer>
 
@@ -1475,7 +1458,7 @@
       const businessPhone = "2603485609";
 
       const text =
-        `New service request:%0A%0A` +
+        `New Al's Detailing service request:%0A%0A` +
         `Name: ${name}%0A` +
         `Phone: ${phone}%0A` +
         `Vehicle / Business Type: ${vehicle}%0A` +
