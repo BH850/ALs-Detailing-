@@ -4,9 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Al’s Detailing | Premium Mobile Auto Detailing in Fort Wayne, Indiana</title>
+  <title>Al’s Detailing & Commercial Cleaning | Fort Wayne, Indiana</title>
 
   <style>
+    :root {
+      --black: #050505;
+      --black-soft: #0a0a0a;
+      --black-card: #111111;
+      --crimson: #d50a0a;
+      --crimson-dark: #8f0707;
+      --crimson-light: #ff4b4b;
+      --white: #ffffff;
+      --gray: #bfbfbf;
+      --muted: #8f8f8f;
+      --border: rgba(255, 255, 255, 0.12);
+      --glass: rgba(255, 255, 255, 0.055);
+      --shadow: 0 35px 90px rgba(0, 0, 0, 0.55);
+    }
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -19,8 +34,8 @@
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background: #050505;
-      color: #ffffff;
+      background: var(--black);
+      color: var(--white);
       line-height: 1.6;
       overflow-x: hidden;
     }
@@ -36,7 +51,7 @@
     }
 
     .container {
-      width: min(1120px, 92%);
+      width: min(1140px, 92%);
       margin: 0 auto;
     }
 
@@ -44,9 +59,7 @@
 
     header {
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
+      inset: 0 0 auto 0;
       z-index: 1000;
       background: rgba(5, 5, 5, 0.82);
       backdrop-filter: blur(16px);
@@ -58,6 +71,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 24px;
     }
 
     .logo {
@@ -66,334 +80,67 @@
       gap: 12px;
       font-weight: 900;
       letter-spacing: -0.03em;
-      font-size: 1.25rem;
+      font-size: 1.12rem;
+      white-space: nowrap;
     }
 
     .logo-mark {
-      width: 42px;
-      height: 42px;
+      width: 44px;
+      height: 44px;
       border-radius: 50%;
-      background: linear-gradient(135deg, #d50a0a, #111111, #8f0707);
-      color: #ffffff;
       display: grid;
       place-items: center;
       font-weight: 900;
+      background: linear-gradient(135deg, var(--crimson), #111111, var(--crimson-dark));
+      color: var(--white);
       border: 1px solid rgba(255, 255, 255, 0.18);
-      box-shadow: 0 0 30px rgba(213, 10, 10, 0.45);
+      box-shadow: 0 0 34px rgba(213, 10, 10, 0.45);
+    }
+
+    .logo-text span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.72rem;
+      letter-spacing: 0.04em;
+      font-weight: 700;
+      margin-top: -2px;
     }
 
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 28px;
-      font-size: 0.92rem;
+      gap: 22px;
+      font-size: 0.9rem;
       color: #d7d7d7;
     }
 
     .nav-links a:hover {
-      color: #ff4b4b;
+      color: var(--crimson-light);
     }
 
     .nav-cta {
-      padding: 12px 18px;
+      padding: 11px 17px;
       border-radius: 999px;
-      background: #d50a0a;
-      color: #ffffff !important;
-      font-weight: 800;
+      background: var(--crimson);
+      color: var(--white) !important;
+      font-weight: 900;
+      box-shadow: 0 12px 30px rgba(213, 10, 10, 0.28);
       transition: 0.25s ease;
-      box-shadow: 0 12px 30px rgba(213, 10, 10, 0.25);
     }
 
     .nav-cta:hover {
       transform: translateY(-2px);
-      box-shadow: 0 14px 35px rgba(213, 10, 10, 0.40);
+      box-shadow: 0 18px 40px rgba(213, 10, 10, 0.42);
     }
 
-    /* HERO */
-
-    .hero {
-      min-height: 100vh;
-      padding: 150px 0 90px;
-      position: relative;
-      background:
-        radial-gradient(circle at 15% 20%, rgba(213, 10, 10, 0.22), transparent 34%),
-        radial-gradient(circle at 85% 20%, rgba(255, 255, 255, 0.08), transparent 30%),
-        linear-gradient(135deg, #050505 0%, #141414 45%, #030303 100%);
-      overflow: hidden;
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
-      background-size: 52px 52px;
-      mask-image: linear-gradient(to bottom, black, transparent 85%);
-      pointer-events: none;
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      right: -120px;
-      bottom: -160px;
-      width: 420px;
-      height: 420px;
-      border-radius: 50%;
-      background: rgba(213, 10, 10, 0.12);
-      filter: blur(18px);
-      pointer-events: none;
-    }
-
-    .hero-grid {
-      position: relative;
-      z-index: 2;
-      display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      gap: 60px;
-      align-items: center;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 8px 14px;
-      border-radius: 999px;
-      background: rgba(213, 10, 10, 0.12);
-      border: 1px solid rgba(213, 10, 10, 0.35);
-      color: #ff4b4b;
-      font-weight: 800;
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-bottom: 22px;
-    }
-
-    .pulse {
-      width: 8px;
-      height: 8px;
-      border-radius: 999px;
-      background: #d50a0a;
-      box-shadow: 0 0 0 8px rgba(213, 10, 10, 0.14);
-    }
-
-    .hero h1 {
-      font-size: clamp(3rem, 8vw, 6.6rem);
-      line-height: 0.95;
-      letter-spacing: -0.08em;
-      margin-bottom: 24px;
-    }
-
-    .hero h1 span {
-      color: #d50a0a;
-      text-shadow: 0 0 40px rgba(213, 10, 10, 0.28);
-    }
-
-    .hero p {
-      max-width: 620px;
-      color: #cfcfcf;
-      font-size: 1.12rem;
-      margin-bottom: 34px;
-    }
-
-    .hero-buttons {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-      margin-bottom: 38px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 52px;
-      padding: 0 24px;
-      border-radius: 999px;
-      font-weight: 900;
-      transition: 0.25s ease;
-    }
-
-    .btn-primary {
-      background: #d50a0a;
-      color: #ffffff;
-      box-shadow: 0 16px 45px rgba(213, 10, 10, 0.30);
-    }
-
-    .btn-secondary {
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      color: #ffffff;
-      background: rgba(255, 255, 255, 0.04);
-    }
-
-    .btn:hover {
-      transform: translateY(-3px);
-    }
-
-    .hero-stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-      max-width: 620px;
-    }
-
-    .stat {
-      border: 1px solid rgba(255, 255, 255, 0.10);
-      background: rgba(255, 255, 255, 0.04);
-      border-radius: 20px;
-      padding: 18px;
-    }
-
-    .stat strong {
-      display: block;
-      color: #ff4b4b;
-      font-size: 1.45rem;
-      line-height: 1;
-      margin-bottom: 6px;
-    }
-
-    .stat span {
-      color: #b9b9b9;
-      font-size: 0.86rem;
-    }
-
-    .hero-card {
-      position: relative;
-      border-radius: 34px;
-      min-height: 550px;
-      padding: 28px;
-      background:
-        linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.03)),
-        radial-gradient(circle at 50% 20%, rgba(213, 10, 10, 0.30), transparent 45%);
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      box-shadow: 0 40px 100px rgba(0, 0, 0, 0.55);
-      overflow: hidden;
-    }
-
-    .car-shape {
-      position: absolute;
-      left: 50%;
-      top: 54%;
-      transform: translate(-50%, -50%);
-      width: 86%;
-      height: 290px;
-      border-radius: 42% 42% 24px 24px;
-      background:
-        linear-gradient(145deg, #202020, #050505 62%),
-        #111111;
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      box-shadow:
-        inset 0 0 45px rgba(255,255,255,0.08),
-        0 40px 90px rgba(0,0,0,0.85);
-    }
-
-    .car-shape::before {
-      content: "";
-      position: absolute;
-      left: 15%;
-      right: 15%;
-      top: 42px;
-      height: 70px;
-      border-radius: 80px 80px 18px 18px;
-      background: linear-gradient(135deg, rgba(255,255,255,0.18), rgba(255,255,255,0.03));
-      border: 1px solid rgba(255, 255, 255, 0.12);
-    }
-
-    .car-shape::after {
-      content: "";
-      position: absolute;
-      left: 8%;
-      right: 8%;
-      bottom: 46px;
-      height: 8px;
-      border-radius: 999px;
-      background: linear-gradient(90deg, transparent, #d50a0a, transparent);
-      box-shadow: 0 0 32px rgba(213, 10, 10, 0.80);
-    }
-
-    .wheel {
-      position: absolute;
-      bottom: -32px;
-      width: 92px;
-      height: 92px;
-      border-radius: 50%;
-      background: radial-gradient(circle, #d50a0a 0 10%, #121212 11% 55%, #020202 56%);
-      border: 8px solid #050505;
-      box-shadow: inset 0 0 20px rgba(255,255,255,0.08);
-    }
-
-    .wheel.left {
-      left: 16%;
-    }
-
-    .wheel.right {
-      right: 16%;
-    }
-
-    .shine {
-      position: absolute;
-      top: -30%;
-      left: -60%;
-      width: 60%;
-      height: 160%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.24), transparent);
-      transform: rotate(18deg);
-      animation: shine 4.8s infinite;
-    }
-
-    @keyframes shine {
-      0% {
-        left: -70%;
-      }
-
-      45%, 100% {
-        left: 130%;
-      }
-    }
-
-    .floating-badge {
-      position: absolute;
-      z-index: 5;
-      border-radius: 18px;
-      padding: 16px 18px;
-      background: rgba(0, 0, 0, 0.65);
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      backdrop-filter: blur(14px);
-      box-shadow: 0 20px 45px rgba(0,0,0,0.35);
-    }
-
-    .floating-badge strong {
-      display: block;
-      color: #ffffff;
-      font-size: 0.96rem;
-    }
-
-    .floating-badge span {
-      color: #bfbfbf;
-      font-size: 0.82rem;
-    }
-
-    .badge-one {
-      top: 36px;
-      left: 28px;
-    }
-
-    .badge-two {
-      right: 28px;
-      bottom: 40px;
-    }
-
-    /* SECTIONS */
+    /* GLOBAL */
 
     section {
       padding: 105px 0;
     }
 
     .section-heading {
-      max-width: 760px;
+      max-width: 780px;
       margin-bottom: 48px;
     }
 
@@ -403,11 +150,11 @@
     }
 
     .section-label {
-      color: #ff4b4b;
+      color: var(--crimson-light);
       font-weight: 900;
       text-transform: uppercase;
-      letter-spacing: 0.12em;
-      font-size: 0.8rem;
+      letter-spacing: 0.13em;
+      font-size: 0.78rem;
       margin-bottom: 12px;
     }
 
@@ -419,14 +166,38 @@
     }
 
     .section-heading p {
-      color: #bfbfbf;
+      color: var(--gray);
       font-size: 1.03rem;
     }
 
-    /* SERVICES */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 0 24px;
+      border-radius: 999px;
+      font-weight: 900;
+      transition: 0.25s ease;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+    }
 
-    .services {
-      background: #0a0a0a;
+    .btn-primary {
+      background: var(--crimson);
+      color: var(--white);
+      box-shadow: 0 16px 45px rgba(213, 10, 10, 0.30);
+    }
+
+    .btn-secondary {
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      background: rgba(255, 255, 255, 0.045);
+      color: var(--white);
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
     }
 
     .cards {
@@ -436,7 +207,7 @@
     }
 
     .card {
-      border-radius: 26px;
+      border-radius: 28px;
       padding: 30px;
       background:
         linear-gradient(180deg, rgba(255,255,255,0.075), rgba(255,255,255,0.025));
@@ -447,7 +218,7 @@
 
     .card:hover {
       transform: translateY(-8px);
-      border-color: rgba(213, 10, 10, 0.42);
+      border-color: rgba(213, 10, 10, 0.44);
       box-shadow: 0 28px 70px rgba(0, 0, 0, 0.35);
     }
 
@@ -457,7 +228,7 @@
       border-radius: 16px;
       background: rgba(213, 10, 10, 0.14);
       border: 1px solid rgba(213, 10, 10, 0.38);
-      color: #ff4b4b;
+      color: var(--crimson-light);
       display: grid;
       place-items: center;
       font-size: 1.35rem;
@@ -467,6 +238,7 @@
     .card h3 {
       font-size: 1.25rem;
       margin-bottom: 12px;
+      letter-spacing: -0.02em;
     }
 
     .card p {
@@ -485,9 +257,238 @@
 
     .card li::before {
       content: "✓";
-      color: #ff4b4b;
+      color: var(--crimson-light);
       font-weight: 900;
       margin-right: 8px;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 100vh;
+      padding: 145px 0 85px;
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 15% 20%, rgba(213, 10, 10, 0.24), transparent 34%),
+        radial-gradient(circle at 86% 18%, rgba(255, 255, 255, 0.08), transparent 30%),
+        linear-gradient(135deg, #050505 0%, #141414 45%, #030303 100%);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+      background-size: 52px 52px;
+      mask-image: linear-gradient(to bottom, black, transparent 85%);
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1.02fr 0.98fr;
+      gap: 58px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(213, 10, 10, 0.12);
+      border: 1px solid rgba(213, 10, 10, 0.35);
+      color: var(--crimson-light);
+      font-weight: 900;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 22px;
+    }
+
+    .pulse {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--crimson);
+      box-shadow: 0 0 0 8px rgba(213, 10, 10, 0.14);
+    }
+
+    .hero h1 {
+      font-size: clamp(3.05rem, 8vw, 6.45rem);
+      line-height: 0.95;
+      letter-spacing: -0.08em;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 span {
+      color: var(--crimson);
+      text-shadow: 0 0 42px rgba(213, 10, 10, 0.32);
+    }
+
+    .hero p {
+      max-width: 650px;
+      color: #cfcfcf;
+      font-size: 1.1rem;
+      margin-bottom: 34px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 38px;
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      max-width: 650px;
+    }
+
+    .stat {
+      border: 1px solid rgba(255, 255, 255, 0.10);
+      background: rgba(255, 255, 255, 0.045);
+      border-radius: 20px;
+      padding: 18px;
+    }
+
+    .stat strong {
+      display: block;
+      color: var(--crimson-light);
+      font-size: 1.38rem;
+      line-height: 1;
+      margin-bottom: 7px;
+    }
+
+    .stat span {
+      color: #b9b9b9;
+      font-size: 0.85rem;
+    }
+
+    .hero-card {
+      position: relative;
+      border-radius: 34px;
+      min-height: 565px;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 30% 20%, rgba(213,10,10,0.30), transparent 34%),
+        linear-gradient(135deg, #1a1a1a, #050505);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-car-image {
+      width: 100%;
+      height: 100%;
+      min-height: 565px;
+      object-fit: cover;
+      filter: contrast(1.08) saturate(1.04) brightness(0.88);
+      transform: scale(1.025);
+    }
+
+    .image-overlay {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(to top, rgba(0,0,0,0.72), rgba(0,0,0,0.08) 48%, rgba(0,0,0,0.35)),
+        radial-gradient(circle at 80% 20%, rgba(213, 10, 10, 0.20), transparent 36%);
+      pointer-events: none;
+    }
+
+    .water-drops {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.62;
+      background:
+        radial-gradient(circle at 18% 22%, rgba(255,255,255,0.42) 0 1px, transparent 3px),
+        radial-gradient(circle at 31% 18%, rgba(255,255,255,0.30) 0 1px, transparent 4px),
+        radial-gradient(circle at 45% 28%, rgba(255,255,255,0.38) 0 1px, transparent 4px),
+        radial-gradient(circle at 64% 20%, rgba(255,255,255,0.32) 0 1px, transparent 3px),
+        radial-gradient(circle at 78% 34%, rgba(255,255,255,0.36) 0 1px, transparent 4px),
+        radial-gradient(circle at 26% 58%, rgba(255,255,255,0.30) 0 1px, transparent 4px),
+        radial-gradient(circle at 56% 62%, rgba(255,255,255,0.28) 0 1px, transparent 5px),
+        radial-gradient(circle at 85% 66%, rgba(255,255,255,0.34) 0 1px, transparent 4px);
+    }
+
+    .shine {
+      position: absolute;
+      top: -30%;
+      left: -60%;
+      width: 60%;
+      height: 160%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent);
+      transform: rotate(18deg);
+      animation: shine 4.8s infinite;
+      z-index: 3;
+      pointer-events: none;
+    }
+
+    @keyframes shine {
+      0% { left: -70%; }
+      45%, 100% { left: 130%; }
+    }
+
+    .floating-badge {
+      position: absolute;
+      z-index: 5;
+      border-radius: 18px;
+      padding: 16px 18px;
+      background: rgba(0, 0, 0, 0.66);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 20px 45px rgba(0,0,0,0.35);
+    }
+
+    .floating-badge strong {
+      display: block;
+      color: var(--white);
+      font-size: 0.96rem;
+    }
+
+    .floating-badge span {
+      color: #d0d0d0;
+      font-size: 0.82rem;
+    }
+
+    .badge-one {
+      top: 28px;
+      left: 24px;
+    }
+
+    .badge-two {
+      right: 24px;
+      bottom: 28px;
+    }
+
+    .image-missing::before {
+      content: "Upload your hero image: images/black-challenger-waterdrops.jpg";
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 40px;
+      color: #ffffff;
+      font-weight: 900;
+      background:
+        radial-gradient(circle at center, rgba(213,10,10,0.25), transparent 42%),
+        linear-gradient(135deg, #171717, #050505);
+      z-index: 1;
+    }
+
+    /* SERVICES */
+
+    .services {
+      background: var(--black-soft);
     }
 
     /* PACKAGES */
@@ -501,7 +502,7 @@
     .package-card {
       position: relative;
       overflow: hidden;
-      min-height: 520px;
+      min-height: 540px;
       display: flex;
       flex-direction: column;
     }
@@ -523,29 +524,31 @@
       padding: 7px 12px;
       border-radius: 999px;
       background: rgba(213, 10, 10, 0.16);
-      color: #ff4b4b;
-      font-size: 0.78rem;
+      color: var(--crimson-light);
+      font-size: 0.76rem;
       font-weight: 900;
       text-transform: uppercase;
       letter-spacing: 0.08em;
     }
 
     .price {
-      font-size: 2.1rem;
+      font-size: 2.05rem;
       font-weight: 900;
       margin: 10px 0 20px;
-      color: #ffffff;
+      color: var(--white);
+      letter-spacing: -0.04em;
     }
 
     .price span {
       font-size: 0.9rem;
       color: #aaa;
       font-weight: 500;
+      letter-spacing: 0;
     }
 
     .package-note {
-      color: #9f9f9f;
-      font-size: 0.86rem;
+      color: #9f9f9f !important;
+      font-size: 0.86rem !important;
       margin-top: auto;
       padding-top: 22px;
     }
@@ -553,6 +556,12 @@
     .package-btn {
       margin-top: 22px;
       width: 100%;
+    }
+
+    .commercial {
+      background:
+        radial-gradient(circle at 18% 0%, rgba(213, 10, 10, 0.16), transparent 32%),
+        #0a0a0a;
     }
 
     /* PROCESS */
@@ -604,8 +613,8 @@
       width: 52px;
       height: 52px;
       border-radius: 50%;
-      background: #d50a0a;
-      color: #ffffff;
+      background: var(--crimson);
+      color: var(--white);
       display: grid;
       place-items: center;
       font-weight: 900;
@@ -645,31 +654,32 @@
       content: "";
       position: absolute;
       inset: 0;
-      background:
-        linear-gradient(135deg, transparent 0%, rgba(213, 10, 10, 0.18) 45%, transparent 100%);
+      background: linear-gradient(135deg, transparent 0%, rgba(213, 10, 10, 0.18) 45%, transparent 100%);
       transform: translateX(-100%);
       animation: galleryShine 6s infinite;
     }
 
     @keyframes galleryShine {
-      0%, 40% {
-        transform: translateX(-100%);
-      }
-
-      70%, 100% {
-        transform: translateX(100%);
-      }
+      0%, 40% { transform: translateX(-100%); }
+      70%, 100% { transform: translateX(100%); }
     }
 
     .gallery-item::after {
-      content: "Al’s Detail";
       position: absolute;
       left: 18px;
       bottom: 18px;
-      color: rgba(255,255,255,0.74);
-      font-weight: 800;
+      color: rgba(255,255,255,0.78);
+      font-weight: 900;
       font-size: 0.9rem;
     }
+
+    .gallery-item:nth-child(1)::after { content: "Auto Detail"; }
+    .gallery-item:nth-child(2)::after { content: "Interior Reset"; }
+    .gallery-item:nth-child(3)::after { content: "Exterior Shine"; }
+    .gallery-item:nth-child(4)::after { content: "Commercial Clean"; }
+    .gallery-item:nth-child(5)::after { content: "Fleet Ready"; }
+    .gallery-item:nth-child(6)::after { content: "Office Cleaning"; }
+    .gallery-item:nth-child(7)::after { content: "Final Finish"; }
 
     .gallery-item.tall {
       grid-row: span 2;
@@ -683,7 +693,7 @@
     /* REVIEWS */
 
     .reviews {
-      background: #0a0a0a;
+      background: var(--black-soft);
     }
 
     .review-card p {
@@ -693,7 +703,7 @@
     }
 
     .review-name {
-      color: #ff4b4b;
+      color: var(--crimson-light);
       font-weight: 900;
     }
 
@@ -702,14 +712,14 @@
     .cta {
       padding: 120px 0;
       background:
-        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.82)),
+        linear-gradient(rgba(0,0,0,0.58), rgba(0,0,0,0.84)),
         radial-gradient(circle at center, rgba(213, 10, 10, 0.26), transparent 45%),
         #050505;
       text-align: center;
     }
 
     .cta-box {
-      max-width: 850px;
+      max-width: 870px;
       margin: 0 auto;
     }
 
@@ -749,7 +759,7 @@
 
     .info-box strong {
       display: block;
-      color: #ff4b4b;
+      color: var(--crimson-light);
       margin-bottom: 6px;
     }
 
@@ -778,7 +788,7 @@
 
     label {
       color: #e6e6e6;
-      font-weight: 800;
+      font-weight: 900;
       font-size: 0.88rem;
     }
 
@@ -788,7 +798,7 @@
       width: 100%;
       border: 1px solid rgba(255,255,255,0.14);
       background: rgba(0,0,0,0.42);
-      color: #ffffff;
+      color: var(--white);
       border-radius: 15px;
       padding: 14px 15px;
       outline: none;
@@ -811,10 +821,7 @@
     }
 
     button {
-      border: none;
-      cursor: pointer;
       width: 100%;
-      font-size: 1rem;
     }
 
     footer {
@@ -832,8 +839,6 @@
       flex-wrap: wrap;
     }
 
-    /* FLOATING CALL BUTTON */
-
     .floating-call {
       position: fixed;
       right: 22px;
@@ -842,8 +847,8 @@
       width: 58px;
       height: 58px;
       border-radius: 50%;
-      background: #d50a0a;
-      color: #ffffff;
+      background: var(--crimson);
+      color: var(--white);
       display: grid;
       place-items: center;
       font-size: 1.35rem;
@@ -853,18 +858,13 @@
     }
 
     @keyframes float {
-      0%, 100% {
-        transform: translateY(0);
-      }
-
-      50% {
-        transform: translateY(-7px);
-      }
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-7px); }
     }
 
     /* RESPONSIVE */
 
-    @media (max-width: 900px) {
+    @media (max-width: 980px) {
       .nav-links {
         display: none;
       }
@@ -879,7 +879,8 @@
         padding-top: 130px;
       }
 
-      .hero-card {
+      .hero-card,
+      .hero-car-image {
         min-height: 430px;
       }
 
@@ -919,6 +920,33 @@
         padding: 80px 0;
       }
     }
+
+    @media (max-width: 520px) {
+      .logo {
+        font-size: 1rem;
+      }
+
+      .logo-text span {
+        display: none;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.8rem, 15vw, 4rem);
+      }
+
+      .floating-badge {
+        left: 18px;
+        right: 18px;
+      }
+
+      .badge-one {
+        top: 18px;
+      }
+
+      .badge-two {
+        bottom: 18px;
+      }
+    }
   </style>
 </head>
 
@@ -928,14 +956,17 @@
     <div class="container nav">
       <a href="#home" class="logo">
         <div class="logo-mark">AL</div>
-        <div>Al’s Detailing</div>
+        <div class="logo-text">
+          Al’s Detailing
+          <span>& Commercial Cleaning</span>
+        </div>
       </a>
 
       <nav class="nav-links">
         <a href="#services">Services</a>
-        <a href="#packages">Packages</a>
+        <a href="#packages">Detailing Packages</a>
+        <a href="#commercial-cleaning">Commercial Cleaning</a>
         <a href="#process">Process</a>
-        <a href="#gallery">Work</a>
         <a href="#contact" class="nav-cta">Book Now</a>
       </nav>
     </div>
@@ -951,56 +982,60 @@
         <div>
           <div class="eyebrow">
             <span class="pulse"></span>
-            Fort Wayne’s Premium Mobile Auto Detailing
+            Fort Wayne Auto Detailing & Commercial Cleaning
           </div>
 
-          <h1>Clean that looks <span>dangerous.</span></h1>
+          <h1>Clean vehicles. <span>Cleaner businesses.</span></h1>
 
           <p>
-            Al’s Detailing brings professional-grade interior and exterior detailing directly to drivers across
-            Fort Wayne, Indiana. From deep interior resets to bold exterior shine, we help your vehicle look sharp,
-            protected, and ready to turn heads.
+            Al’s Detailing & Commercial Cleaning provides premium mobile auto detailing and reliable commercial
+            cleaning services across Fort Wayne, Indiana. From water-bead shine and spotless interiors to clean
+            workspaces and business-ready facilities, we help vehicles and businesses make a stronger first impression.
           </p>
 
           <div class="hero-buttons">
-            <a href="#contact" class="btn btn-primary">Book Your Detail</a>
+            <a href="#contact" class="btn btn-primary">Request Service</a>
             <a href="#packages" class="btn btn-secondary">View Packages</a>
           </div>
 
           <div class="hero-stats">
             <div class="stat">
-              <strong>100%</strong>
-              <span>Hand-detailed finish</span>
+              <strong>Mobile</strong>
+              <span>Auto detailing that comes to you</span>
             </div>
 
             <div class="stat">
-              <strong>Mobile</strong>
-              <span>We come to you</span>
+              <strong>Business</strong>
+              <span>Commercial cleaning support</span>
             </div>
 
             <div class="stat">
               <strong>Fort Wayne</strong>
-              <span>Local detailing service</span>
+              <span>Local service you can call</span>
             </div>
           </div>
         </div>
 
         <div class="hero-card">
+          <img
+            src="images/black-challenger-waterdrops.jpg"
+            alt="Black Dodge Challenger with water drops after detailing"
+            class="hero-car-image"
+            onerror="this.style.display='none'; this.parentElement.classList.add('image-missing');"
+          />
+
+          <div class="image-overlay"></div>
+          <div class="water-drops"></div>
           <div class="shine"></div>
 
           <div class="floating-badge badge-one">
-            <strong>Interior Reset</strong>
-            <span>Seats, carpets, mats, panels</span>
+            <strong>Black Challenger Finish</strong>
+            <span>Gloss, depth, and clean detail</span>
           </div>
 
           <div class="floating-badge badge-two">
-            <strong>Exterior Shine</strong>
-            <span>Wash, gloss, wheels, protection</span>
-          </div>
-
-          <div class="car-shape">
-            <div class="wheel left"></div>
-            <div class="wheel right"></div>
+            <strong>Water-Bead Shine</strong>
+            <span>Premium wash and finish look</span>
           </div>
         </div>
       </div>
@@ -1011,58 +1046,58 @@
       <div class="container">
         <div class="section-heading">
           <div class="section-label">What We Do</div>
-          <h2>Detailing services built around pride, precision, and presentation.</h2>
+          <h2>One brand for clean cars, clean fleets, and clean commercial spaces.</h2>
           <p>
-            Whether your vehicle needs a quick refresh or a full deep clean, Al’s Detailing delivers
-            the kind of finish people notice before you say a word.
+            Al’s combines mobile detailing and commercial cleaning under one simple promise:
+            make the things your customers see look sharp, professional, and ready.
           </p>
         </div>
 
         <div class="cards">
           <div class="card">
             <div class="icon">✦</div>
-            <h3>Interior Detailing</h3>
-            <p>Deep-cleaning for the places dirt hides and daily life builds up.</p>
+            <h3>Mobile Auto Detailing</h3>
+            <p>Professional interior and exterior detailing brought directly to your location.</p>
             <ul>
-              <li>Vacuuming and wipe down</li>
-              <li>Carpet and mat cleaning</li>
-              <li>Dash, doors, cupholders</li>
-              <li>Leather and vinyl care</li>
+              <li>Interior vacuuming and wipe down</li>
+              <li>Exterior hand wash</li>
+              <li>Wheel and tire cleaning</li>
+              <li>Windows, mats, panels, and trim</li>
             </ul>
           </div>
 
           <div class="card">
             <div class="icon">◆</div>
-            <h3>Exterior Detailing</h3>
-            <p>A clean, glossy finish designed to bring the body lines back to life.</p>
+            <h3>Commercial Cleaning</h3>
+            <p>Reliable cleaning services for businesses that need their space to look professional.</p>
             <ul>
-              <li>Hand wash and dry</li>
-              <li>Wheel and tire cleaning</li>
-              <li>Window cleaning</li>
-              <li>Gloss enhancement</li>
+              <li>Office cleaning</li>
+              <li>Restroom cleaning</li>
+              <li>Trash removal</li>
+              <li>Floor and surface cleaning</li>
             </ul>
           </div>
 
           <div class="card">
             <div class="icon">★</div>
-            <h3>Full Detail Packages</h3>
-            <p>Interior and exterior service combined for the complete reset.</p>
+            <h3>Fleet & Business Services</h3>
+            <p>Cleaning support for companies that need vehicles and facilities maintained.</p>
             <ul>
-              <li>Inside and outside detail</li>
-              <li>Stain attention</li>
-              <li>Odor refresh</li>
-              <li>Protection options</li>
+              <li>Fleet vehicle detailing</li>
+              <li>Small business cleaning</li>
+              <li>Recurring service options</li>
+              <li>Custom cleaning plans</li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- THREE TIER PACKAGES -->
+    <!-- AUTO DETAILING PACKAGES -->
     <section class="packages" id="packages">
       <div class="container">
         <div class="section-heading center">
-          <div class="section-label">Three-Tier Packages</div>
+          <div class="section-label">Auto Detailing Packages</div>
           <h2>Choose your level of clean.</h2>
           <p>
             Three clear options for Fort Wayne drivers: a quick refresh, a full reset, or a deeper premium shine.
@@ -1071,14 +1106,11 @@
         </div>
 
         <div class="cards">
-          <!-- TIER 1 -->
           <div class="card package-card">
             <span class="tag">Tier 1</span>
             <h3>Basic Wash & Interior Refresh</h3>
             <div class="price">From $75 <span>/ vehicle</span></div>
-            <p>
-              Best for vehicles that need a clean maintenance detail without heavy stain or buildup removal.
-            </p>
+            <p>Best for vehicles that need a clean maintenance detail without heavy buildup removal.</p>
 
             <ul>
               <li>Exterior hand wash</li>
@@ -1091,21 +1123,15 @@
               <li>Light fragrance refresh</li>
             </ul>
 
-            <p class="package-note">
-              Ideal for weekly, biweekly, or monthly upkeep.
-            </p>
-
+            <p class="package-note">Ideal for weekly, biweekly, or monthly upkeep.</p>
             <a href="#contact" class="btn btn-secondary package-btn">Book Tier 1</a>
           </div>
 
-          <!-- TIER 2 -->
           <div class="card package-card featured">
             <span class="tag">Tier 2 · Most Popular</span>
             <h3>Premium Full Detail</h3>
             <div class="price">From $150 <span>/ vehicle</span></div>
-            <p>
-              Best for customers who want a stronger inside-and-out reset with more attention to high-touch areas.
-            </p>
+            <p>Best for customers who want a stronger inside-and-out reset with more attention to high-touch areas.</p>
 
             <ul>
               <li>Everything in Tier 1</li>
@@ -1119,21 +1145,15 @@
               <li>Spray wax or quick sealant</li>
             </ul>
 
-            <p class="package-note">
-              Best value for most daily drivers, family vehicles, and rideshare vehicles.
-            </p>
-
+            <p class="package-note">Best value for daily drivers, family vehicles, and rideshare vehicles.</p>
             <a href="#contact" class="btn btn-primary package-btn">Book Tier 2</a>
           </div>
 
-          <!-- TIER 3 -->
           <div class="card package-card">
             <span class="tag">Tier 3</span>
             <h3>Showroom Deep Detail</h3>
             <div class="price">From $225 <span>/ vehicle</span></div>
-            <p>
-              Best for vehicles needing a deeper transformation, richer shine, and a more complete finish.
-            </p>
+            <p>Best for vehicles needing a deeper transformation, richer shine, and a more complete finish.</p>
 
             <ul>
               <li>Everything in Tier 2</li>
@@ -1147,11 +1167,84 @@
               <li>Final walkaround and finish check</li>
             </ul>
 
-            <p class="package-note">
-              Great for special occasions, resale prep, neglected vehicles, or a full seasonal reset.
-            </p>
-
+            <p class="package-note">Great for resale prep, neglected vehicles, special occasions, or a seasonal reset.</p>
             <a href="#contact" class="btn btn-secondary package-btn">Book Tier 3</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMMERCIAL CLEANING -->
+    <section class="commercial" id="commercial-cleaning">
+      <div class="container">
+        <div class="section-heading center">
+          <div class="section-label">Commercial Cleaning</div>
+          <h2>Clean spaces that help businesses look ready.</h2>
+          <p>
+            Al’s Commercial Cleaning services are built for offices, small businesses, shops, suites,
+            commercial spaces, and companies that need reliable cleaning support across Fort Wayne and surrounding areas.
+          </p>
+        </div>
+
+        <div class="cards">
+          <div class="card package-card">
+            <span class="tag">Basic</span>
+            <h3>Standard Business Clean</h3>
+            <div class="price">Quote-Based <span>/ visit</span></div>
+            <p>Best for routine cleaning and professional upkeep.</p>
+
+            <ul>
+              <li>Trash removal</li>
+              <li>Surface wiping</li>
+              <li>Restroom cleaning</li>
+              <li>Floor sweeping or vacuuming</li>
+              <li>Entryway refresh</li>
+              <li>Light dusting</li>
+              <li>Break area wipe down</li>
+            </ul>
+
+            <p class="package-note">Great for small offices, storefronts, suites, and local businesses.</p>
+            <a href="#contact" class="btn btn-secondary package-btn">Request Quote</a>
+          </div>
+
+          <div class="card package-card featured">
+            <span class="tag">Most Popular</span>
+            <h3>Recurring Commercial Clean</h3>
+            <div class="price">Custom Plan <span>/ weekly or monthly</span></div>
+            <p>Best for businesses that need consistent cleaning on a set schedule.</p>
+
+            <ul>
+              <li>Everything in Standard Clean</li>
+              <li>Scheduled weekly or monthly service</li>
+              <li>Breakroom cleaning</li>
+              <li>High-touch surface cleaning</li>
+              <li>Restroom restocking support</li>
+              <li>Custom checklist by location</li>
+              <li>Ongoing quality check-ins</li>
+            </ul>
+
+            <p class="package-note">Best for companies that want the space to stay clean without thinking about it.</p>
+            <a href="#contact" class="btn btn-primary package-btn">Request Plan</a>
+          </div>
+
+          <div class="card package-card">
+            <span class="tag">Deep Clean</span>
+            <h3>Commercial Deep Cleaning</h3>
+            <div class="price">Quote-Based <span>/ project</span></div>
+            <p>Best for move-ins, move-outs, seasonal resets, or spaces needing extra attention.</p>
+
+            <ul>
+              <li>Detailed surface cleaning</li>
+              <li>Baseboards and edges</li>
+              <li>Interior glass cleaning</li>
+              <li>Restroom deep clean</li>
+              <li>Floor detail attention</li>
+              <li>High-touch area cleaning</li>
+              <li>Final walkthrough</li>
+            </ul>
+
+            <p class="package-note">Strong choice for business openings, turnovers, inspections, and reset projects.</p>
+            <a href="#contact" class="btn btn-secondary package-btn">Request Deep Clean</a>
           </div>
         </div>
       </div>
@@ -1162,10 +1255,10 @@
       <div class="container process-grid">
         <div class="process-panel">
           <div class="section-label">Our Process</div>
-          <h3>Detailing made simple from booking to final walkaround.</h3>
+          <h3>Simple booking. Clear service. Clean results.</h3>
           <p>
-            Al’s Detailing is built for convenience. You book, we arrive, we detail,
-            and you get back a vehicle that feels clean again.
+            Whether you need a personal vehicle detailed, a fleet cleaned, or a business space maintained,
+            Al’s makes the process easy from first contact to final walkthrough.
           </p>
           <a href="#contact" class="btn btn-primary">Schedule Service</a>
         </div>
@@ -1174,32 +1267,32 @@
           <div class="step">
             <div class="step-number">1</div>
             <div>
-              <h4>Request Your Appointment</h4>
-              <p>Choose the package that fits your vehicle and send your preferred date, time, and Fort Wayne-area location.</p>
+              <h4>Request Your Service</h4>
+              <p>Choose auto detailing, commercial cleaning, fleet service, or a custom cleaning request.</p>
             </div>
           </div>
 
           <div class="step">
             <div class="step-number">2</div>
             <div>
-              <h4>Vehicle Inspection</h4>
-              <p>We review the condition of the vehicle and identify stains, buildup, wheels, trim, and high-touch areas.</p>
+              <h4>Confirm Details</h4>
+              <p>We confirm your vehicle, space, location, service needs, schedule, and any condition-based details.</p>
             </div>
           </div>
 
           <div class="step">
             <div class="step-number">3</div>
             <div>
-              <h4>Professional Detail</h4>
-              <p>Your vehicle receives a focused, hands-on detail using a step-by-step approach for consistent results.</p>
+              <h4>Professional Cleaning</h4>
+              <p>Your vehicle or commercial space receives a focused cleaning process based on your selected service.</p>
             </div>
           </div>
 
           <div class="step">
             <div class="step-number">4</div>
             <div>
-              <h4>Final Walkaround</h4>
-              <p>We finish with a quality check so your vehicle leaves looking clean, sharp, and ready.</p>
+              <h4>Final Walkthrough</h4>
+              <p>We finish with a quality check so the final result looks clean, sharp, and ready.</p>
             </div>
           </div>
         </div>
@@ -1211,10 +1304,10 @@
       <div class="container">
         <div class="section-heading center">
           <div class="section-label">Our Work</div>
-          <h2>From everyday buildup to a head-turning finish.</h2>
+          <h2>From vehicle shine to business-ready spaces.</h2>
           <p>
             Replace these blocks with real before-and-after photos once you have them.
-            Real detailing photos will make this section convert even harder.
+            Add car details, fleet photos, office cleaning results, and commercial space transformations.
           </p>
         </div>
 
@@ -1237,7 +1330,7 @@
           <div class="section-label">Customer Experience</div>
           <h2>Built on trust, repeat customers, and clean results.</h2>
           <p>
-            Strong service earns strong word of mouth. These sample reviews can be replaced with real testimonials.
+            These sample reviews can be replaced with real customer feedback as Al’s builds testimonials.
           </p>
         </div>
 
@@ -1258,9 +1351,9 @@
 
           <div class="card review-card">
             <p>
-              “The convenience of mobile detailing plus the quality made it an easy choice.”
+              “The convenience and quality made it an easy choice for our cleaning needs.”
             </p>
-            <div class="review-name">— Repeat Client</div>
+            <div class="review-name">— Local Business Client</div>
           </div>
         </div>
       </div>
@@ -1269,14 +1362,14 @@
     <!-- CTA -->
     <section class="cta">
       <div class="container cta-box">
-        <h2>Fort Wayne, pull up clean.</h2>
+        <h2>Fort Wayne, keep it clean.</h2>
         <p>
-          Book Al’s Detailing for a crimson-and-black level of premium mobile detailing that saves time,
-          protects your vehicle, and leaves a bold first impression.
+          Book Al’s Detailing & Commercial Cleaning for mobile auto detailing, commercial cleaning,
+          fleet cleaning, and clean results that help you make a bold first impression.
         </p>
 
         <div class="hero-buttons" style="justify-content: center;">
-          <a href="#contact" class="btn btn-primary">Book Appointment</a>
+          <a href="#contact" class="btn btn-primary">Request Service</a>
           <a href="tel:2603485609" class="btn btn-secondary">Call Now</a>
         </div>
       </div>
@@ -1288,10 +1381,10 @@
         <div>
           <div class="section-heading">
             <div class="section-label">Book Now</div>
-            <h2>Ready for a better detail?</h2>
+            <h2>Ready for a better clean?</h2>
             <p>
-              Send your information and Al’s Detailing will follow up to confirm your vehicle,
-              package, location, and appointment time.
+              Send your information and Al’s will follow up to confirm your service,
+              location, package, quote needs, and appointment time.
             </p>
           </div>
 
@@ -1304,6 +1397,11 @@
             <div class="info-box">
               <strong>Service Area</strong>
               <span>Fort Wayne, IN and surrounding areas</span>
+            </div>
+
+            <div class="info-box">
+              <strong>Services</strong>
+              <span>Mobile auto detailing, fleet detailing, office cleaning, and commercial cleaning</span>
             </div>
 
             <div class="info-box">
@@ -1326,27 +1424,31 @@
             </div>
 
             <div class="field">
-              <label for="vehicle">Vehicle Type</label>
-              <input id="vehicle" type="text" placeholder="Car, truck, SUV, etc." />
+              <label for="vehicle">Vehicle / Business Type</label>
+              <input id="vehicle" type="text" placeholder="Car, SUV, office, shop, suite, etc." />
             </div>
 
             <div class="field">
-              <label for="service">Package</label>
+              <label for="service">Service Needed</label>
               <select id="service">
-                <option>Tier 1 - Basic Wash & Interior Refresh</option>
-                <option>Tier 2 - Premium Full Detail</option>
-                <option>Tier 3 - Showroom Deep Detail</option>
+                <option>Auto Detailing - Tier 1 Basic Wash & Interior Refresh</option>
+                <option>Auto Detailing - Tier 2 Premium Full Detail</option>
+                <option>Auto Detailing - Tier 3 Showroom Deep Detail</option>
+                <option>Commercial Cleaning - Standard Business Clean</option>
+                <option>Commercial Cleaning - Recurring Cleaning Plan</option>
+                <option>Commercial Cleaning - Deep Clean</option>
+                <option>Fleet & Business Cleaning Services</option>
                 <option>Not Sure Yet</option>
               </select>
             </div>
 
             <div class="field full">
               <label for="message">Message</label>
-              <textarea id="message" placeholder="Tell us about your vehicle, condition, location, and preferred appointment time."></textarea>
+              <textarea id="message" placeholder="Tell us about the vehicle or business space, condition, location, and preferred appointment time."></textarea>
             </div>
 
             <div class="full">
-              <button type="button" class="btn btn-primary" onclick="sendBooking()">Request Appointment</button>
+              <button type="button" class="btn btn-primary" onclick="sendBooking()">Request Service</button>
             </div>
           </div>
         </form>
@@ -1357,8 +1459,8 @@
 
   <footer>
     <div class="container footer-flex">
-      <div>© 2026 Al’s Detailing. All rights reserved.</div>
-      <div>Fort Wayne, Indiana Mobile Auto Detailing</div>
+      <div>© 2026 Al’s Detailing & Commercial Cleaning. All rights reserved.</div>
+      <div>Fort Wayne, Indiana Auto Detailing & Commercial Cleaning</div>
     </div>
   </footer>
 
@@ -1372,7 +1474,13 @@
 
       const businessPhone = "2603485609";
 
-      const text = `New detailing request:%0A%0AName: ${name}%0APhone: ${phone}%0AVehicle: ${vehicle}%0APackage: ${service}%0AMessage: ${message}`;
+      const text =
+        `New service request:%0A%0A` +
+        `Name: ${name}%0A` +
+        `Phone: ${phone}%0A` +
+        `Vehicle / Business Type: ${vehicle}%0A` +
+        `Service Needed: ${service}%0A` +
+        `Message: ${message}`;
 
       window.location.href = `sms:${businessPhone}?body=${text}`;
     }
