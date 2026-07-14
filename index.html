@@ -1,1473 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Al’s Detailing provides mobile auto detailing, dealership lot detailing, fleet cleaning, and staged vehicle cleaning in Fort Wayne, Indiana.">
+  <meta name="theme-color" content="#b5121b">
+  <title>Al’s Detailing | Fort Wayne Mobile Detailing</title>
 
-  <title>Al’s Detailing | Mobile Auto Detailing & Dealership Lot Services in Fort Wayne, Indiana</title>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"LocalBusiness",
+    "name":"Al's Detailing",
+    "telephone":"260-348-5609",
+    "areaServed":"Fort Wayne, Indiana",
+    "description":"Mobile auto detailing, dealership inventory cleaning, fleet cleaning and staged vehicle cleaning."
+  }
+  </script>
 
   <style>
-    :root {
-      --black: #050505;
-      --black-soft: #0a0a0a;
-      --crimson: #d50a0a;
-      --crimson-dark: #8f0707;
-      --crimson-light: #ff4b4b;
-      --white: #ffffff;
-      --gray: #bfbfbf;
-      --muted: #8f8f8f;
-      --border: rgba(255, 255, 255, 0.12);
-      --shadow: 0 35px 90px rgba(0, 0, 0, 0.55);
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--black);
-      color: var(--white);
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    .container {
-      width: min(1140px, 92%);
-      margin: 0 auto;
-    }
-
-    header {
-      position: fixed;
-      inset: 0 0 auto 0;
-      z-index: 1000;
-      background: rgba(5, 5, 5, 0.84);
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    }
-
-    .nav {
-      height: 78px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 24px;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-weight: 900;
-      letter-spacing: -0.03em;
-      font-size: 1.12rem;
-      white-space: nowrap;
-    }
-
-    .logo-mark {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      font-weight: 900;
-      background: linear-gradient(135deg, var(--crimson), #111111, var(--crimson-dark));
-      color: var(--white);
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      box-shadow: 0 0 34px rgba(213, 10, 10, 0.45);
-    }
-
-    .logo-text span {
-      display: block;
-      color: var(--muted);
-      font-size: 0.72rem;
-      letter-spacing: 0.04em;
-      font-weight: 700;
-      margin-top: -2px;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      font-size: 0.9rem;
-      color: #d7d7d7;
-    }
-
-    .nav-links a:hover {
-      color: var(--crimson-light);
-    }
-
-    .nav-cta {
-      padding: 11px 17px;
-      border-radius: 999px;
-      background: var(--crimson);
-      color: var(--white) !important;
-      font-weight: 900;
-      box-shadow: 0 12px 30px rgba(213, 10, 10, 0.28);
-      transition: 0.25s ease;
-    }
-
-    .nav-cta:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 18px 40px rgba(213, 10, 10, 0.42);
-    }
-
-    section {
-      padding: 105px 0;
-    }
-
-    .section-heading {
-      max-width: 780px;
-      margin-bottom: 48px;
-    }
-
-    .section-heading.center {
-      margin-inline: auto;
-      text-align: center;
-    }
-
-    .section-label {
-      color: var(--crimson-light);
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: 0.13em;
-      font-size: 0.78rem;
-      margin-bottom: 12px;
-    }
-
-    .section-heading h2 {
-      font-size: clamp(2.2rem, 5vw, 4rem);
-      line-height: 1;
-      letter-spacing: -0.06em;
-      margin-bottom: 18px;
-    }
-
-    .section-heading p {
-      color: var(--gray);
-      font-size: 1.03rem;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 52px;
-      padding: 0 24px;
-      border-radius: 999px;
-      font-weight: 900;
-      transition: 0.25s ease;
-      border: none;
-      cursor: pointer;
-      font-size: 1rem;
-    }
-
-    .btn-primary {
-      background: var(--crimson);
-      color: var(--white);
-      box-shadow: 0 16px 45px rgba(213, 10, 10, 0.30);
-    }
-
-    .btn-secondary {
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      background: rgba(255, 255, 255, 0.045);
-      color: var(--white);
-    }
-
-    .btn:hover {
-      transform: translateY(-3px);
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-    }
-
-    .card {
-      border-radius: 28px;
-      padding: 30px;
-      background:
-        linear-gradient(180deg, rgba(255,255,255,0.075), rgba(255,255,255,0.025));
-      border: 1px solid rgba(255, 255, 255, 0.10);
-      min-height: 280px;
-      transition: 0.25s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-8px);
-      border-color: rgba(213, 10, 10, 0.44);
-      box-shadow: 0 28px 70px rgba(0, 0, 0, 0.35);
-    }
-
-    .icon {
-      width: 48px;
-      height: 48px;
-      border-radius: 16px;
-      background: rgba(213, 10, 10, 0.14);
-      border: 1px solid rgba(213, 10, 10, 0.38);
-      color: var(--crimson-light);
-      display: grid;
-      place-items: center;
-      font-size: 1.35rem;
-      margin-bottom: 22px;
-    }
-
-    .card h3 {
-      font-size: 1.25rem;
-      margin-bottom: 12px;
-      letter-spacing: -0.02em;
-    }
-
-    .card p {
-      color: #bdbdbd;
-      font-size: 0.97rem;
-      margin-bottom: 18px;
-    }
-
-    .card ul {
-      list-style: none;
-      display: grid;
-      gap: 8px;
-      color: #d5d5d5;
-      font-size: 0.92rem;
-    }
-
-    .card li::before {
-      content: "✓";
-      color: var(--crimson-light);
-      font-weight: 900;
-      margin-right: 8px;
-    }
-
-    .hero {
-      min-height: 100vh;
-      padding: 145px 0 85px;
-      position: relative;
-      overflow: hidden;
-      background:
-        radial-gradient(circle at 15% 20%, rgba(213, 10, 10, 0.24), transparent 34%),
-        radial-gradient(circle at 86% 18%, rgba(255, 255, 255, 0.08), transparent 30%),
-        linear-gradient(135deg, #050505 0%, #141414 45%, #030303 100%);
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
-      background-size: 52px 52px;
-      mask-image: linear-gradient(to bottom, black, transparent 85%);
-      pointer-events: none;
-    }
-
-    .hero-grid {
-      position: relative;
-      z-index: 2;
-      display: grid;
-      grid-template-columns: 1.02fr 0.98fr;
-      gap: 58px;
-      align-items: center;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 8px 14px;
-      border-radius: 999px;
-      background: rgba(213, 10, 10, 0.12);
-      border: 1px solid rgba(213, 10, 10, 0.35);
-      color: var(--crimson-light);
-      font-weight: 900;
-      font-size: 0.78rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-bottom: 22px;
-    }
-
-    .pulse {
-      width: 8px;
-      height: 8px;
-      border-radius: 999px;
-      background: var(--crimson);
-      box-shadow: 0 0 0 8px rgba(213, 10, 10, 0.14);
-    }
-
-    .hero h1 {
-      font-size: clamp(3.05rem, 8vw, 6.45rem);
-      line-height: 0.95;
-      letter-spacing: -0.08em;
-      margin-bottom: 24px;
-    }
-
-    .hero h1 span {
-      color: var(--crimson);
-      text-shadow: 0 0 42px rgba(213, 10, 10, 0.32);
-    }
-
-    .hero p {
-      max-width: 650px;
-      color: #cfcfcf;
-      font-size: 1.1rem;
-      margin-bottom: 34px;
-    }
-
-    .hero-buttons {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-      margin-bottom: 38px;
-    }
-
-    .hero-stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-      max-width: 650px;
-    }
-
-    .stat {
-      border: 1px solid rgba(255, 255, 255, 0.10);
-      background: rgba(255, 255, 255, 0.045);
-      border-radius: 20px;
-      padding: 18px;
-    }
-
-    .stat strong {
-      display: block;
-      color: var(--crimson-light);
-      font-size: 1.38rem;
-      line-height: 1;
-      margin-bottom: 7px;
-    }
-
-    .stat span {
-      color: #b9b9b9;
-      font-size: 0.85rem;
-    }
-
-    .hero-card {
-      position: relative;
-      border-radius: 34px;
-      min-height: 565px;
-      overflow: hidden;
-      background:
-        radial-gradient(circle at 30% 20%, rgba(213,10,10,0.30), transparent 34%),
-        linear-gradient(135deg, #1a1a1a, #050505);
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      box-shadow: var(--shadow);
-    }
-
-    .hero-car-image {
-      width: 100%;
-      height: 100%;
-      min-height: 565px;
-      object-fit: cover;
-      filter: contrast(1.08) saturate(1.04) brightness(0.88);
-      transform: scale(1.025);
-    }
-
-    .image-overlay {
-      position: absolute;
-      inset: 0;
-      background:
-        linear-gradient(to top, rgba(0,0,0,0.72), rgba(0,0,0,0.08) 48%, rgba(0,0,0,0.35)),
-        radial-gradient(circle at 80% 20%, rgba(213, 10, 10, 0.20), transparent 36%);
-      pointer-events: none;
-    }
-
-    .water-drops {
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      opacity: 0.62;
-      background:
-        radial-gradient(circle at 18% 22%, rgba(255,255,255,0.42) 0 1px, transparent 3px),
-        radial-gradient(circle at 31% 18%, rgba(255,255,255,0.30) 0 1px, transparent 4px),
-        radial-gradient(circle at 45% 28%, rgba(255,255,255,0.38) 0 1px, transparent 4px),
-        radial-gradient(circle at 64% 20%, rgba(255,255,255,0.32) 0 1px, transparent 3px),
-        radial-gradient(circle at 78% 34%, rgba(255,255,255,0.36) 0 1px, transparent 4px),
-        radial-gradient(circle at 26% 58%, rgba(255,255,255,0.30) 0 1px, transparent 4px),
-        radial-gradient(circle at 56% 62%, rgba(255,255,255,0.28) 0 1px, transparent 5px),
-        radial-gradient(circle at 85% 66%, rgba(255,255,255,0.34) 0 1px, transparent 4px);
-    }
-
-    .shine {
-      position: absolute;
-      top: -30%;
-      left: -60%;
-      width: 60%;
-      height: 160%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent);
-      transform: rotate(18deg);
-      animation: shine 4.8s infinite;
-      z-index: 3;
-      pointer-events: none;
-    }
-
-    @keyframes shine {
-      0% {
-        left: -70%;
-      }
-
-      45%, 100% {
-        left: 130%;
-      }
-    }
-
-    .floating-badge {
-      position: absolute;
-      z-index: 5;
-      border-radius: 18px;
-      padding: 16px 18px;
-      background: rgba(0, 0, 0, 0.66);
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      backdrop-filter: blur(14px);
-      box-shadow: 0 20px 45px rgba(0,0,0,0.35);
-    }
-
-    .floating-badge strong {
-      display: block;
-      color: var(--white);
-      font-size: 0.96rem;
-    }
-
-    .floating-badge span {
-      color: #d0d0d0;
-      font-size: 0.82rem;
-    }
-
-    .badge-one {
-      top: 28px;
-      left: 24px;
-    }
-
-    .badge-two {
-      right: 24px;
-      bottom: 28px;
-    }
-
-    .image-missing::before {
-      content: "Upload image to: images/black-challenger-waterdrops.jpg";
-      position: absolute;
-      inset: 0;
-      display: grid;
-      place-items: center;
-      text-align: center;
-      padding: 40px;
-      color: #ffffff;
-      font-weight: 900;
-      background:
-        radial-gradient(circle at center, rgba(213,10,10,0.25), transparent 42%),
-        linear-gradient(135deg, #171717, #050505);
-      z-index: 1;
-    }
-
-    .services {
-      background: var(--black-soft);
-    }
-
-    .packages {
-      background:
-        radial-gradient(circle at 50% 0%, rgba(213, 10, 10, 0.16), transparent 35%),
-        #070707;
-    }
-
-    .dealer {
-      background:
-        radial-gradient(circle at 18% 0%, rgba(213, 10, 10, 0.16), transparent 32%),
-        #0a0a0a;
-    }
-
-    .package-card {
-      position: relative;
-      overflow: hidden;
-      min-height: 540px;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .package-card.featured {
-      border-color: rgba(213, 10, 10, 0.55);
-      box-shadow: 0 30px 85px rgba(213, 10, 10, 0.16);
-      transform: translateY(-10px);
-    }
-
-    .package-card.featured:hover {
-      transform: translateY(-16px);
-    }
-
-    .tag {
-      display: inline-flex;
-      width: fit-content;
-      margin-bottom: 18px;
-      padding: 7px 12px;
-      border-radius: 999px;
-      background: rgba(213, 10, 10, 0.16);
-      color: var(--crimson-light);
-      font-size: 0.76rem;
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-
-    .price {
-      font-size: 2.05rem;
-      font-weight: 900;
-      margin: 10px 0 20px;
-      color: var(--white);
-      letter-spacing: -0.04em;
-    }
-
-    .price span {
-      font-size: 0.9rem;
-      color: #aaa;
-      font-weight: 500;
-      letter-spacing: 0;
-    }
-
-    .package-note {
-      color: #9f9f9f !important;
-      font-size: 0.86rem !important;
-      margin-top: auto;
-      padding-top: 22px;
-    }
-
-    .package-btn {
-      margin-top: 22px;
-      width: 100%;
-    }
-
-    .process-grid {
-      display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
-      gap: 42px;
-      align-items: start;
-    }
-
-    .process-panel {
-      border-radius: 30px;
-      background: linear-gradient(135deg, rgba(213, 10, 10, 0.14), rgba(255,255,255,0.035));
-      border: 1px solid rgba(213, 10, 10, 0.25);
-      padding: 34px;
-      position: sticky;
-      top: 110px;
-    }
-
-    .process-panel h3 {
-      font-size: 2rem;
-      line-height: 1.05;
-      letter-spacing: -0.04em;
-      margin-bottom: 16px;
-    }
-
-    .process-panel p {
-      color: #c9c9c9;
-      margin-bottom: 24px;
-    }
-
-    .steps {
-      display: grid;
-      gap: 18px;
-    }
-
-    .step {
-      display: grid;
-      grid-template-columns: 60px 1fr;
-      gap: 18px;
-      border-radius: 24px;
-      padding: 24px;
-      border: 1px solid rgba(255, 255, 255, 0.10);
-      background: rgba(255,255,255,0.04);
-    }
-
-    .step-number {
-      width: 52px;
-      height: 52px;
-      border-radius: 50%;
-      background: var(--crimson);
-      color: var(--white);
-      display: grid;
-      place-items: center;
-      font-weight: 900;
-      box-shadow: 0 12px 30px rgba(213, 10, 10, 0.28);
-    }
-
-    .step h4 {
-      font-size: 1.15rem;
-      margin-bottom: 6px;
-    }
-
-    .step p {
-      color: #bdbdbd;
-      font-size: 0.96rem;
-    }
-
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
-    }
-
-    .gallery-item {
-      min-height: 230px;
-      border-radius: 24px;
-      background:
-        linear-gradient(135deg, rgba(255,255,255,0.14), rgba(255,255,255,0.03)),
-        radial-gradient(circle at 40% 30%, rgba(213, 10, 10, 0.26), transparent 45%);
-      border: 1px solid rgba(255,255,255,0.10);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .gallery-item::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, transparent 0%, rgba(213, 10, 10, 0.18) 45%, transparent 100%);
-      transform: translateX(-100%);
-      animation: galleryShine 6s infinite;
-    }
-
-    @keyframes galleryShine {
-      0%, 40% {
-        transform: translateX(-100%);
-      }
-
-      70%, 100% {
-        transform: translateX(100%);
-      }
-    }
-
-    .gallery-item::after {
-      position: absolute;
-      left: 18px;
-      bottom: 18px;
-      color: rgba(255,255,255,0.78);
-      font-weight: 900;
-      font-size: 0.9rem;
-    }
-
-    .gallery-item:nth-child(1)::after { content: "Personal Auto Detail"; }
-    .gallery-item:nth-child(2)::after { content: "Interior Reset"; }
-    .gallery-item:nth-child(3)::after { content: "Exterior Shine"; }
-    .gallery-item:nth-child(4)::after { content: "Dealer Lot Ready"; }
-    .gallery-item:nth-child(5)::after { content: "Fleet Vehicles"; }
-    .gallery-item:nth-child(6)::after { content: "Inventory Prep"; }
-    .gallery-item:nth-child(7)::after { content: "Final Finish"; }
-
-    .gallery-item.tall {
-      grid-row: span 2;
-      min-height: 476px;
-    }
-
-    .gallery-item.wide {
-      grid-column: span 2;
-    }
-
-    .reviews {
-      background: var(--black-soft);
-    }
-
-    .review-card p {
-      font-size: 1.02rem;
-      color: #dedede;
-      margin-bottom: 24px;
-    }
-
-    .review-name {
-      color: var(--crimson-light);
-      font-weight: 900;
-    }
-
-    .cta {
-      padding: 120px 0;
-      background:
-        linear-gradient(rgba(0,0,0,0.58), rgba(0,0,0,0.84)),
-        radial-gradient(circle at center, rgba(213, 10, 10, 0.26), transparent 45%),
-        #050505;
-      text-align: center;
-    }
-
-    .cta-box {
-      max-width: 870px;
-      margin: 0 auto;
-    }
-
-    .cta h2 {
-      font-size: clamp(2.5rem, 7vw, 5.2rem);
-      line-height: 0.95;
-      letter-spacing: -0.07em;
-      margin-bottom: 22px;
-    }
-
-    .cta p {
-      color: #cfcfcf;
-      font-size: 1.08rem;
-      margin-bottom: 32px;
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
-      gap: 34px;
-      align-items: start;
-    }
-
-    .contact-info {
-      display: grid;
-      gap: 18px;
-    }
-
-    .info-box {
-      border-radius: 22px;
-      padding: 24px;
-      border: 1px solid rgba(255,255,255,0.10);
-      background: rgba(255,255,255,0.04);
-    }
-
-    .info-box strong {
-      display: block;
-      color: var(--crimson-light);
-      margin-bottom: 6px;
-    }
-
-    .info-box span {
-      color: #c9c9c9;
-    }
-
-    form {
-      border-radius: 30px;
-      padding: 30px;
-      border: 1px solid rgba(255,255,255,0.12);
-      background: linear-gradient(180deg, rgba(255,255,255,0.075), rgba(255,255,255,0.025));
-    }
-
-    .form-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-    }
-
-    .field {
-      display: grid;
-      gap: 8px;
-      margin-bottom: 16px;
-    }
-
-    label {
-      color: #e6e6e6;
-      font-weight: 900;
-      font-size: 0.88rem;
-    }
-
-    input,
-    select,
-    textarea {
-      width: 100%;
-      border: 1px solid rgba(255,255,255,0.14);
-      background: rgba(0,0,0,0.42);
-      color: var(--white);
-      border-radius: 15px;
-      padding: 14px 15px;
-      outline: none;
-      font-size: 1rem;
-    }
-
-    input:focus,
-    select:focus,
-    textarea:focus {
-      border-color: rgba(213, 10, 10, 0.78);
-    }
-
-    textarea {
-      min-height: 130px;
-      resize: vertical;
-    }
-
-    .full {
-      grid-column: 1 / -1;
-    }
-
-    button {
-      width: 100%;
-    }
-
-    footer {
-      padding: 36px 0;
-      border-top: 1px solid rgba(255,255,255,0.09);
-      color: #9d9d9d;
-      font-size: 0.92rem;
-    }
-
-    .footer-flex {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 18px;
-      flex-wrap: wrap;
-    }
-
-    .floating-call {
-      position: fixed;
-      right: 22px;
-      bottom: 22px;
-      z-index: 999;
-      width: 58px;
-      height: 58px;
-      border-radius: 50%;
-      background: var(--crimson);
-      color: var(--white);
-      display: grid;
-      place-items: center;
-      font-size: 1.35rem;
-      font-weight: 900;
-      box-shadow: 0 16px 40px rgba(213, 10, 10, 0.42);
-      animation: float 2.8s ease-in-out infinite;
-    }
-
-    @keyframes float {
-      0%, 100% {
-        transform: translateY(0);
-      }
-
-      50% {
-        transform: translateY(-7px);
-      }
-    }
-
-    @media (max-width: 980px) {
-      .nav-links {
-        display: none;
-      }
-
-      .hero-grid,
-      .process-grid,
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero {
-        padding-top: 130px;
-      }
-
-      .hero-card,
-      .hero-car-image {
-        min-height: 430px;
-      }
-
-      .cards {
-        grid-template-columns: 1fr;
-      }
-
-      .package-card.featured {
-        transform: none;
-      }
-
-      .package-card.featured:hover {
-        transform: translateY(-8px);
-      }
-
-      .hero-stats {
-        grid-template-columns: 1fr;
-      }
-
-      .gallery-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .gallery-item,
-      .gallery-item.tall,
-      .gallery-item.wide {
-        grid-column: auto;
-        grid-row: auto;
-        min-height: 240px;
-      }
-
-      .form-grid {
-        grid-template-columns: 1fr;
-      }
-
-      section {
-        padding: 80px 0;
-      }
-    }
-
-    @media (max-width: 520px) {
-      .logo {
-        font-size: 1rem;
-      }
-
-      .logo-text span {
-        display: none;
-      }
-
-      .hero h1 {
-        font-size: clamp(2.8rem, 15vw, 4rem);
-      }
-
-      .floating-badge {
-        left: 18px;
-        right: 18px;
-      }
-
-      .badge-one {
-        top: 18px;
-      }
-
-      .badge-two {
-        bottom: 18px;
-      }
-    }
+    :root{--black:#070707;--black2:#101013;--black3:#18181c;--red:#b5121b;--red2:#e31b2b;--white:#fff;--cream:#f5f3f1;--gray:#c7c7cc;--muted:#8f8f98;--line:rgba(255,255,255,.12);--shadow:0 24px 65px rgba(0,0,0,.34);--max:1180px}
+    *{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;scroll-padding-top:110px}body{min-width:320px;overflow-x:hidden;background:var(--black);color:var(--white);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}body.menu-open{overflow:hidden}a{color:inherit;text-decoration:none}img{display:block;max-width:100%}button,input,select,textarea{font:inherit}.container{width:min(var(--max),calc(100% - 40px));margin:auto}.section{padding:92px 0}.light{background:var(--cream);color:var(--black)}.dark{background:var(--black2)}
+    .kicker{display:inline-flex;align-items:center;gap:10px;margin-bottom:14px;color:var(--red2);font-size:.78rem;font-weight:900;letter-spacing:.13em;text-transform:uppercase}.kicker:before{width:32px;height:3px;background:currentColor;content:""}.title{max-width:820px;margin-bottom:18px;font-size:clamp(2.2rem,5vw,4.2rem);font-weight:950;letter-spacing:-.055em;line-height:.98}.copy{max-width:760px;color:var(--gray);font-size:1.03rem}.light .copy{color:#55555d}.center{text-align:center}.center .kicker{justify-content:center}.center .title,.center .copy{margin-inline:auto}
+    .btn{display:inline-flex;min-height:52px;align-items:center;justify-content:center;padding:0 22px;border:1px solid transparent;border-radius:8px;font-weight:900;cursor:pointer;transition:.2s}.btn:hover{transform:translateY(-2px)}.btn-red{background:linear-gradient(135deg,var(--red2),var(--red));color:#fff;box-shadow:0 15px 35px rgba(181,18,27,.3)}.btn-outline{border-color:rgba(255,255,255,.3);background:rgba(255,255,255,.05);color:#fff}.btn-black{background:#070707;color:#fff}
+    .topbar{background:var(--red);font-size:.86rem;font-weight:800}.topbar-inner{min-height:38px;display:flex;align-items:center;justify-content:space-between;gap:20px}.topbar-links{display:flex;gap:18px}.header{position:sticky;top:0;z-index:1000;border-bottom:1px solid var(--line);background:rgba(7,7,7,.95);backdrop-filter:blur(16px)}.nav{min-height:76px;display:flex;align-items:center;gap:24px}.brand{display:flex;align-items:center;gap:11px;flex-shrink:0}.mark{width:46px;height:46px;display:grid;place-items:center;border:2px solid rgba(255,255,255,.18);border-radius:50%;background:linear-gradient(145deg,var(--red2),#710910);box-shadow:0 0 28px rgba(181,18,27,.35);font-weight:950}.brand strong{display:block;line-height:1}.brand small{display:block;margin-top:4px;color:var(--muted);font-size:.67rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase}.navlinks{display:flex;align-items:center;gap:19px;margin-left:auto}.navlinks>a:not(.btn){font-size:.86rem;font-weight:800}.menu{width:46px;height:46px;display:none;margin-left:auto;border:1px solid var(--line);border-radius:8px;background:var(--black3);color:#fff;font-size:1.35rem}
+    .hero{position:relative;overflow:hidden;background:radial-gradient(circle at 10% 20%,rgba(227,27,43,.22),transparent 34%),linear-gradient(120deg,#060606,#101013 58%,#060606)}.hero:before{position:absolute;inset:0;background:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:56px 56px;content:""}.hero-grid{position:relative;z-index:1;min-height:680px;display:grid;grid-template-columns:.95fr 1.05fr;gap:54px;align-items:center;padding:76px 0}.eyebrow{margin-bottom:18px;color:var(--red2);font-size:.8rem;font-weight:900;letter-spacing:.13em;text-transform:uppercase}.hero h1{max-width:720px;margin-bottom:22px;font-size:clamp(3.2rem,7vw,6.6rem);font-weight:950;letter-spacing:-.075em;line-height:.9}.hero h1 span{color:var(--red2)}.hero p{max-width:650px;color:var(--gray);font-size:1.07rem}.hero-actions{display:flex;flex-wrap:wrap;gap:13px;margin-top:28px}.phone-line{display:inline-block;margin-top:22px;font-weight:900}.phone-line span{color:var(--muted);font-weight:650}.hero-visual{position:relative;min-height:520px;overflow:hidden;border:1px solid rgba(255,255,255,.15);border-radius:34px 34px 8px 34px;background:var(--black3);box-shadow:var(--shadow)}.hero-visual img{width:100%;height:100%;min-height:520px;object-fit:cover;object-position:58% center;filter:contrast(1.08) brightness(.84);transform:scale(1.02)}.hero-visual:after{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.8),transparent 55%),radial-gradient(circle at 90% 20%,rgba(227,27,43,.2),transparent 35%);content:""}.hero-badge{position:absolute;z-index:2;right:22px;bottom:22px;max-width:300px;padding:18px;border-left:4px solid var(--red2);background:rgba(5,5,5,.84);backdrop-filter:blur(12px)}.hero-badge strong{display:block}.hero-badge span{color:var(--gray);font-size:.84rem}
+    .trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--black2)}.trust-grid{display:grid;grid-template-columns:repeat(4,1fr)}.trust-item{min-height:106px;display:flex;align-items:center;gap:13px;padding:21px;border-right:1px solid var(--line)}.trust-item:last-child{border:0}.trust-icon{width:42px;height:42px;display:grid;flex:0 0 42px;place-items:center;border-radius:50%;background:rgba(227,27,43,.13);color:var(--red2);font-weight:950}.trust-item strong{display:block;font-size:.93rem}.trust-item span span{display:block;color:var(--muted);font-size:.76rem}
+    .intro{display:grid;grid-template-columns:.95fr 1.05fr;gap:58px;align-items:center}.intro-image{position:relative;min-height:500px;border-radius:8px 34px 34px;background:linear-gradient(to top,rgba(0,0,0,.75),transparent 58%),url('./images/black-challenger-waterdrops.jpg') center/cover no-repeat,linear-gradient(135deg,#1b1b1e,#080808);box-shadow:var(--shadow)}.image-label{position:absolute;right:22px;bottom:22px;left:22px;padding:18px;border-left:4px solid var(--red2);background:rgba(7,7,7,.84)}.image-label strong{display:block}.image-label span{color:var(--gray);font-size:.84rem}.checks{display:grid;gap:12px;margin-top:25px;list-style:none}.checks li{display:flex;gap:10px;color:#33343a;font-weight:700}.checks li:before{width:24px;height:24px;display:grid;flex:0 0 24px;place-items:center;border-radius:50%;background:var(--red);color:#fff;content:"✓";font-size:.75rem}
+    .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:43px}.service{min-height:335px;display:flex;flex-direction:column;padding:28px;border:1px solid var(--line);border-radius:18px;background:radial-gradient(circle at 100% 0%,rgba(227,27,43,.12),transparent 32%),var(--black3);transition:.2s}.service:hover{transform:translateY(-5px);border-color:rgba(227,27,43,.5);box-shadow:var(--shadow)}.service-num{color:var(--red2);font-size:.76rem;font-weight:900;letter-spacing:.1em}.service h3{margin:20px 0 10px;font-size:1.35rem;line-height:1.1}.service p{color:var(--gray);font-size:.9rem}.service ul{display:grid;gap:7px;margin-top:17px;list-style:none;color:#ececef;font-size:.85rem}.service li:before{margin-right:8px;color:var(--red2);content:"•"}.service a{margin-top:auto;padding-top:20px;font-size:.86rem;font-weight:900}.service a span{color:var(--red2)}
+    .package-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:45px}.package{min-height:580px;display:flex;flex-direction:column;padding:30px;border:1px solid #d9d9dd;border-radius:18px;background:#fff;box-shadow:0 18px 45px rgba(0,0,0,.08)}.package.featured{border:2px solid var(--red);transform:translateY(-10px);box-shadow:0 28px 60px rgba(181,18,27,.16)}.tag{width:max-content;margin-bottom:17px;padding:7px 11px;border-radius:999px;background:rgba(181,18,27,.1);color:var(--red);font-size:.71rem;font-weight:900;letter-spacing:.09em;text-transform:uppercase}.package h3{font-size:1.45rem;line-height:1.08}.price{margin:14px 0;color:var(--red);font-size:2rem;font-weight:950}.price small{color:#6d6d74;font-size:.78rem}.package>p{color:#5a5a61;font-size:.9rem}.package ul{display:grid;gap:9px;margin:20px 0;list-style:none;color:#29292e;font-size:.85rem;font-weight:700}.package li:before{margin-right:8px;color:var(--red);content:"✓"}.package-note{margin-top:auto;padding-top:14px;color:#74747b!important;font-size:.77rem!important}.package .btn{width:100%;margin-top:16px}
+    .dealer{position:relative;overflow:hidden;background:linear-gradient(120deg,rgba(113,9,16,.96),rgba(181,18,27,.95)),url('./images/dealership-lot.jpg') center/cover no-repeat}.dealer-grid{position:relative;display:grid;grid-template-columns:.9fr 1.1fr;gap:50px;align-items:center}.dealer .kicker,.dealer .copy{color:#fff}.dealer-panel{display:grid;grid-template-columns:repeat(2,1fr);gap:13px;padding:22px;border:1px solid rgba(255,255,255,.2);border-radius:26px;background:rgba(5,5,5,.76);backdrop-filter:blur(14px);box-shadow:var(--shadow)}.dealer-feature{min-height:132px;padding:18px;border:1px solid var(--line);border-radius:13px;background:rgba(255,255,255,.05)}.dealer-feature strong{display:block;margin-bottom:6px}.dealer-feature span{color:var(--gray);font-size:.79rem}
+    .process{display:grid;grid-template-columns:.78fr 1.22fr;gap:50px;align-items:start}.process-intro{position:sticky;top:120px}.steps{display:grid;gap:16px}.step{display:grid;grid-template-columns:60px 1fr;gap:16px;padding:22px;border:1px solid var(--line);border-radius:17px;background:var(--black3)}.step-num{width:52px;height:52px;display:grid;place-items:center;border-radius:50%;background:var(--red);font-weight:950}.step h3{margin-bottom:6px;font-size:1.1rem}.step p{color:var(--gray);font-size:.87rem}
+    .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}.why{padding:24px;border-left:4px solid var(--red);background:#fff;box-shadow:0 13px 36px rgba(0,0,0,.08)}.why strong{display:block;margin-bottom:7px}.why p{color:#5b5b62;font-size:.84rem}.about{display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:center}.about-card{overflow:hidden;border:1px solid var(--line);border-radius:25px;background:var(--black3);box-shadow:var(--shadow)}.about-img{min-height:350px;background:linear-gradient(to top,rgba(0,0,0,.72),transparent 55%),url('./images/black-challenger-waterdrops.jpg') center/cover no-repeat,linear-gradient(135deg,#202024,#080808)}.about-card div:last-child{padding:24px}.about-card p{color:var(--gray);font-size:.87rem}
+    .gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:225px;gap:15px;margin-top:42px}.gallery-item{position:relative;overflow:hidden;border-radius:15px;background-color:#17171a;background-position:center;background-size:cover;box-shadow:0 15px 40px rgba(0,0,0,.23)}.gallery-item:after{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.84),transparent 62%);content:""}.gallery-item span{position:absolute;z-index:1;right:16px;bottom:14px;left:16px;font-size:.86rem;font-weight:900}.tall{grid-row:span 2}.wide{grid-column:span 2}
+    .review-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;align-items:center;margin-top:42px}.score{padding:30px;border:1px solid var(--line);border-radius:24px;background:var(--black3);text-align:center}.stars{margin-bottom:12px;color:#ffc94a;font-size:1.35rem;letter-spacing:.1em}.score strong{display:block;font-size:1.5rem}.score p,.review p{color:var(--gray);font-size:.86rem}.review-list{display:grid;gap:14px}.review{padding:22px;border-left:4px solid var(--red2);background:rgba(255,255,255,.055)}.review strong{display:block;margin-bottom:6px}
+    .area{display:grid;grid-template-columns:.85fr 1.15fr;gap:42px;align-items:center}.area-map{min-height:380px;display:grid;place-items:center;border-radius:25px;background:radial-gradient(circle at 50% 50%,rgba(227,27,43,.34),transparent 16%),linear-gradient(135deg,#17171a,#09090b);box-shadow:var(--shadow)}.pin{width:112px;height:112px;display:grid;place-items:center;border-radius:50%;background:var(--red);box-shadow:0 0 0 24px rgba(181,18,27,.12),0 0 0 50px rgba(181,18,27,.07);font-size:.84rem;font-weight:950;text-align:center}.chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:24px}.chip{padding:8px 12px;border:1px solid var(--line);border-radius:999px;background:var(--black3);font-size:.8rem;font-weight:800}
+    .faq{display:grid;grid-template-columns:.75fr 1.25fr;gap:48px;align-items:start}.faq-list{display:grid;gap:11px}details{border:1px solid #dddde0;border-radius:11px;background:#fff}summary{position:relative;padding:18px 48px 18px 18px;cursor:pointer;list-style:none;font-weight:900}summary::-webkit-details-marker{display:none}summary:after{position:absolute;right:18px;color:var(--red);content:"+";font-size:1.4rem}details[open] summary:after{content:"−"}details p{padding:0 18px 18px;color:#5b5b62;font-size:.86rem}
+    .quote{background:radial-gradient(circle at 10% 20%,rgba(227,27,43,.2),transparent 28%),var(--black2)}.quote-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:45px;align-items:start}.contact-cards{display:grid;gap:12px;margin-top:25px}.contact-card{padding:16px;border:1px solid var(--line);border-left:4px solid var(--red2);background:rgba(255,255,255,.05)}.contact-card strong{display:block;font-size:.87rem}.contact-card span,.contact-card a{color:var(--gray);font-size:.86rem}.form{padding:28px;border:1px solid var(--line);border-radius:25px;background:rgba(255,255,255,.055);box-shadow:var(--shadow)}.form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.field{display:grid;gap:7px}.full{grid-column:1/-1}label{font-size:.8rem;font-weight:850}input,select,textarea{width:100%;border:1px solid rgba(255,255,255,.15);border-radius:8px;outline:0;background:rgba(5,5,5,.72);color:#fff}input,select{min-height:49px;padding:0 13px}textarea{min-height:125px;padding:12px 13px;resize:vertical}input:focus,select:focus,textarea:focus{border-color:var(--red2);box-shadow:0 0 0 3px rgba(227,27,43,.14)}.form .btn{width:100%}.note{margin-top:10px;color:var(--muted);font-size:.75rem}.status{min-height:22px;margin-top:9px;color:#ff9aa2;font-size:.8rem;font-weight:750}
+    footer{border-top:1px solid var(--line);background:#050505}.footer-grid{display:grid;grid-template-columns:1.1fr .9fr .9fr;gap:34px;padding:52px 0 30px}footer p,footer a,footer li{color:var(--muted);font-size:.82rem}footer h3{margin-bottom:12px;font-size:.92rem}.footer-list{display:grid;gap:8px;list-style:none}.footer-bottom{display:flex;justify-content:space-between;gap:20px;padding:18px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.76rem}.float{position:fixed;right:16px;bottom:16px;z-index:900;display:grid;gap:9px}.float a{width:52px;height:52px;display:grid;place-items:center;border-radius:50%;background:var(--red);box-shadow:0 15px 35px rgba(0,0,0,.34);font-weight:950}.float a:first-child{background:var(--black3)}
+    @media(max-width:1040px){.hero-grid,.intro,.dealer-grid,.process,.about,.area,.faq,.quote-grid,.review-grid{grid-template-columns:1fr}.process-intro{position:static}.hero-visual,.hero-visual img{min-height:450px}.navlinks{gap:13px}.navlinks>a:not(.btn){font-size:.78rem}}
+    @media(max-width:850px){.menu{display:block}.navlinks{position:fixed;top:114px;right:0;left:0;max-height:calc(100vh - 114px);display:grid;align-content:start;gap:0;overflow:auto;padding:16px 20px 26px;border-top:1px solid var(--line);background:rgba(7,7,7,.99);transform:translateY(-130%);transition:.22s}.navlinks.open{transform:translateY(0)}.navlinks>a:not(.btn){padding:15px 3px;border-bottom:1px solid var(--line);font-size:.98rem}.navlinks .btn{margin-top:16px}.trust-grid,.service-grid,.package-grid,.why-grid{grid-template-columns:repeat(2,1fr)}.package.featured{transform:none}.gallery{grid-template-columns:repeat(2,1fr)}.wide{grid-column:span 2}.footer-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:600px){.container{width:min(var(--max),calc(100% - 28px))}.section{padding:72px 0}.topbar-inner{justify-content:center}.topbar-inner>span,.topbar-links a:first-child,.brand small{display:none}.topbar-links{width:100%;justify-content:center}.hero-grid{min-height:auto;padding:62px 0}.hero h1{font-size:clamp(3.1rem,16vw,4.6rem)}.hero-actions,.hero-actions .btn{width:100%}.hero-visual,.hero-visual img{min-height:370px}.hero-badge{right:12px;bottom:12px;left:12px}.trust-grid,.service-grid,.package-grid,.why-grid,.dealer-panel,.form-grid,.footer-grid{grid-template-columns:1fr}.trust-item{border-right:0;border-bottom:1px solid var(--line)}.trust-item:last-child{border-bottom:0}.gallery{grid-template-columns:1fr;grid-auto-rows:220px}.tall,.wide{grid-row:auto;grid-column:auto}.step{grid-template-columns:48px 1fr;padding:19px}.step-num{width:44px;height:44px}.form{padding:21px}.footer-bottom{flex-direction:column}.float{right:11px;bottom:11px}}
   </style>
 </head>
-
 <body>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span>Mobile detailing and high-volume vehicle cleaning in Fort Wayne, Indiana</span>
+      <div class="topbar-links"><a href="#area">Fort Wayne & nearby areas</a><a href="tel:2603485609">Call: (260) 348-5609</a></div>
+    </div>
+  </div>
 
-  <header>
+  <header class="header">
     <div class="container nav">
-      <a href="#home" class="logo">
-        <div class="logo-mark">AL</div>
-        <div class="logo-text">
-          Al’s Detailing
-          <span>Mobile Detailing & Dealership Services</span>
-        </div>
+      <a class="brand" href="#home" aria-label="Al's Detailing home">
+        <span class="mark">AL</span><span><strong>Al’s Detailing</strong><small>Mobile • Dealership • Fleet</small></span>
       </a>
-
-      <nav class="nav-links">
-        <a href="#services">Services</a>
-        <a href="#packages">Detailing Packages</a>
-        <a href="#dealership-services">Dealership Services</a>
-        <a href="#process">Process</a>
-        <a href="#gallery">Work</a>
-        <a href="#contact" class="nav-cta">Book Now</a>
+      <button class="menu" id="menu" type="button" aria-expanded="false" aria-label="Open menu">☰</button>
+      <nav class="navlinks" id="navlinks">
+        <a href="#home">Home</a><a href="#services">Services</a><a href="#packages">Packages</a><a href="#dealers">Dealership Services</a><a href="#about">About</a><a href="#gallery">Gallery</a><a href="#faq">FAQ</a><a class="btn btn-red" href="#quote">Free Quote</a>
       </nav>
     </div>
   </header>
 
-  <a href="tel:2603485609" class="floating-call">☎</a>
-
   <main>
-
     <section class="hero" id="home">
       <div class="container hero-grid">
         <div>
-          <div class="eyebrow">
-            <span class="pulse"></span>
-            Fort Wayne Mobile Auto Detailing & Lot Services
-          </div>
-
+          <div class="eyebrow">Fort Wayne Auto Detailing</div>
           <h1>Clean cars. <span>Lot-ready inventory.</span></h1>
-
-          <p>
-            Al’s Detailing provides premium mobile auto detailing and high-volume vehicle cleaning services across
-            Fort Wayne, Indiana. From personal vehicles and blacktop-ready shine to dealership inventory,
-            fleet vehicles, and staged car lots, we help every vehicle look clean, sharp, and ready to move.
-          </p>
-
-          <div class="hero-buttons">
-            <a href="#contact" class="btn btn-primary">Request Service</a>
-            <a href="#dealership-services" class="btn btn-secondary">Dealership Services</a>
-          </div>
-
-          <div class="hero-stats">
-            <div class="stat">
-              <strong>Mobile</strong>
-              <span>Auto detailing that comes to you</span>
-            </div>
-
-            <div class="stat">
-              <strong>Dealer Lots</strong>
-              <span>Inventory cleaning and prep</span>
-            </div>
-
-            <div class="stat">
-              <strong>Fleet</strong>
-              <span>Bulk vehicle cleaning options</span>
-            </div>
-          </div>
+          <p>Al’s Detailing provides mobile auto detailing for personal vehicles and high-volume vehicle cleaning for dealerships, used-car lots, fleets, auctions, rentals and staged vehicle groups throughout the Fort Wayne area.</p>
+          <div class="hero-actions"><a class="btn btn-red" href="#quote">Request a Free Quote</a><a class="btn btn-outline" href="tel:2603485609">Call Now</a></div>
+          <a class="phone-line" href="tel:2603485609">(260) 348-5609 <span>— Call or text to get started</span></a>
         </div>
-
-        <div class="hero-card">
-          <img
-            src="images/black-challenger-waterdrops.jpg"
-            alt="Black Dodge Challenger with water drops after detailing"
-            class="hero-car-image"
-            onerror="this.style.display='none'; this.parentElement.classList.add('image-missing');"
-          />
-
-          <div class="image-overlay"></div>
-          <div class="water-drops"></div>
-          <div class="shine"></div>
-
-          <div class="floating-badge badge-one">
-            <strong>Black Challenger Finish</strong>
-            <span>Gloss, depth, and clean detail</span>
-          </div>
-
-          <div class="floating-badge badge-two">
-            <strong>Water-Bead Shine</strong>
-            <span>Premium wash and finish look</span>
-          </div>
+        <div class="hero-visual">
+          <img src="./images/black-challenger-waterdrops.jpg" alt="Glossy black performance car with water beads after detailing">
+          <div class="hero-badge"><strong>Personal, dealership and fleet service</strong><span>One vehicle or a full staged lot — the service is built around the job.</span></div>
         </div>
       </div>
     </section>
 
-    <section class="services" id="services">
-      <div class="container">
-        <div class="section-heading">
-          <div class="section-label">What We Do</div>
-          <h2>One detailing brand for personal cars, dealership lots, and staged vehicle groups.</h2>
-          <p>
-            Al’s Detailing keeps vehicles looking sharp whether it is one customer car,
-            a row of dealership inventory, or a large group of vehicles staged at a lot.
-          </p>
-        </div>
-
-        <div class="cards">
-          <div class="card">
-            <div class="icon">✦</div>
-            <h3>Mobile Auto Detailing</h3>
-            <p>Professional interior and exterior detailing brought directly to your location.</p>
-            <ul>
-              <li>Interior vacuuming and wipe down</li>
-              <li>Exterior hand wash</li>
-              <li>Wheel and tire cleaning</li>
-              <li>Windows, mats, panels, and trim</li>
-            </ul>
-          </div>
-
-          <div class="card">
-            <div class="icon">◆</div>
-            <h3>Dealership Lot Detailing</h3>
-            <p>Vehicle cleaning support for dealerships, used car lots, and staged inventory.</p>
-            <ul>
-              <li>Inventory vehicle washdowns</li>
-              <li>Interior refreshes</li>
-              <li>Lot-ready exterior shine</li>
-              <li>Fast turnaround for multiple vehicles</li>
-            </ul>
-          </div>
-
-          <div class="card">
-            <div class="icon">★</div>
-            <h3>Fleet & Bulk Vehicle Services</h3>
-            <p>Cleaning solutions for businesses with multiple vehicles that need consistent presentation.</p>
-            <ul>
-              <li>Fleet vehicle detailing</li>
-              <li>Rental and company vehicles</li>
-              <li>Auction and staged vehicles</li>
-              <li>Recurring service options</li>
-            </ul>
-          </div>
-        </div>
+    <section class="trust">
+      <div class="container trust-grid">
+        <div class="trust-item"><span class="trust-icon">01</span><span><strong>Mobile Service</strong><span>We come to the vehicles.</span></span></div>
+        <div class="trust-item"><span class="trust-icon">02</span><span><strong>Personal Details</strong><span>Interior, exterior and full details.</span></span></div>
+        <div class="trust-item"><span class="trust-icon">03</span><span><strong>Dealer & Fleet Work</strong><span>Flexible multi-vehicle service.</span></span></div>
+        <div class="trust-item"><span class="trust-icon">04</span><span><strong>Fort Wayne Based</strong><span>Nearby areas by appointment.</span></span></div>
       </div>
     </section>
 
-    <section class="packages" id="packages">
-      <div class="container">
-        <div class="section-heading center">
-          <div class="section-label">Auto Detailing Packages</div>
-          <h2>Choose your level of clean.</h2>
-          <p>
-            Three clear options for Fort Wayne drivers: a quick refresh, a full reset, or a deeper premium shine.
-            Final pricing may vary based on vehicle size, condition, pet hair, stains, and add-ons.
-          </p>
-        </div>
-
-        <div class="cards">
-          <div class="card package-card">
-            <span class="tag">Tier 1</span>
-            <h3>Basic Wash & Interior Refresh</h3>
-            <div class="price">From $75 <span>/ vehicle</span></div>
-            <p>Best for vehicles that need a clean maintenance detail without heavy buildup removal.</p>
-
-            <ul>
-              <li>Exterior hand wash</li>
-              <li>Wheel face cleaning</li>
-              <li>Tire shine</li>
-              <li>Interior vacuum</li>
-              <li>Dashboard and console wipe down</li>
-              <li>Door panels wiped</li>
-              <li>Interior and exterior windows cleaned</li>
-              <li>Light fragrance refresh</li>
-            </ul>
-
-            <p class="package-note">Ideal for weekly, biweekly, or monthly upkeep.</p>
-            <a href="#contact" class="btn btn-secondary package-btn">Book Tier 1</a>
-          </div>
-
-          <div class="card package-card featured">
-            <span class="tag">Tier 2 · Most Popular</span>
-            <h3>Premium Full Detail</h3>
-            <div class="price">From $150 <span>/ vehicle</span></div>
-            <p>Best for customers who want a stronger inside-and-out reset with more attention to high-touch areas.</p>
-
-            <ul>
-              <li>Everything in Tier 1</li>
-              <li>Deeper interior vacuum</li>
-              <li>Seats and carpets cleaned</li>
-              <li>Floor mats cleaned</li>
-              <li>Cupholders and vents detailed</li>
-              <li>Door jamb wipe down</li>
-              <li>Wheel and tire deep clean</li>
-              <li>Exterior gloss enhancement</li>
-              <li>Spray wax or quick sealant</li>
-            </ul>
-
-            <p class="package-note">Best value for daily drivers, family vehicles, and rideshare vehicles.</p>
-            <a href="#contact" class="btn btn-primary package-btn">Book Tier 2</a>
-          </div>
-
-          <div class="card package-card">
-            <span class="tag">Tier 3</span>
-            <h3>Showroom Deep Detail</h3>
-            <div class="price">From $225 <span>/ vehicle</span></div>
-            <p>Best for vehicles needing a deeper transformation, richer shine, and a more complete finish.</p>
-
-            <ul>
-              <li>Everything in Tier 2</li>
-              <li>Deep stain attention</li>
-              <li>Leather or vinyl conditioning</li>
-              <li>Detailed trim and crevice cleaning</li>
-              <li>Premium exterior hand wash</li>
-              <li>Paint gloss boost</li>
-              <li>Longer-lasting wax or sealant</li>
-              <li>Wheel wells cleaned</li>
-              <li>Final walkaround and finish check</li>
-            </ul>
-
-            <p class="package-note">Great for resale prep, neglected vehicles, special occasions, or a seasonal reset.</p>
-            <a href="#contact" class="btn btn-secondary package-btn">Book Tier 3</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="dealer" id="dealership-services">
-      <div class="container">
-        <div class="section-heading center">
-          <div class="section-label">Dealership & Fleet Services</div>
-          <h2>Keep every vehicle on the lot looking ready to sell.</h2>
-          <p>
-            Al’s Detailing provides lot-ready vehicle cleaning for dealerships, used car lots,
-            rental fleets, auction vehicles, company vehicles, and staged inventory across
-            Fort Wayne and surrounding areas.
-          </p>
-        </div>
-
-        <div class="cards">
-          <div class="card package-card">
-            <span class="tag">Lot Refresh</span>
-            <h3>Inventory Washdown</h3>
-            <div class="price">Quote-Based <span>/ vehicle or lot</span></div>
-            <p>Best for dealerships and lots that need vehicles cleaned and presentable.</p>
-
-            <ul>
-              <li>Exterior washdown</li>
-              <li>Window cleaning</li>
-              <li>Wheel face cleaning</li>
-              <li>Light interior wipe down</li>
-              <li>Quick vacuum option</li>
-              <li>Lot-ready presentation</li>
-            </ul>
-
-            <p class="package-note">Ideal for used car lots, dealership rows, and staged inventory.</p>
-            <a href="#contact" class="btn btn-secondary package-btn">Request Lot Quote</a>
-          </div>
-
-          <div class="card package-card featured">
-            <span class="tag">Most Popular</span>
-            <h3>Dealership Detail Program</h3>
-            <div class="price">Custom Plan <span>/ recurring service</span></div>
-            <p>Best for dealerships that need consistent cleaning support on a schedule.</p>
-
-            <ul>
-              <li>Recurring lot service</li>
-              <li>Multiple vehicles cleaned per visit</li>
-              <li>Interior refresh options</li>
-              <li>Exterior shine service</li>
-              <li>Priority vehicle prep</li>
-              <li>Custom checklist by dealership</li>
-              <li>Flexible service volume</li>
-            </ul>
-
-            <p class="package-note">Built for dealerships that want inventory looking ready every week.</p>
-            <a href="#contact" class="btn btn-primary package-btn">Request Program</a>
-          </div>
-
-          <div class="card package-card">
-            <span class="tag">Bulk Service</span>
-            <h3>Fleet & Staged Vehicle Cleaning</h3>
-            <div class="price">Quote-Based <span>/ project</span></div>
-            <p>Best for companies, auctions, rentals, and businesses with multiple vehicles.</p>
-
-            <ul>
-              <li>Fleet vehicle cleaning</li>
-              <li>Auction vehicle prep</li>
-              <li>Rental vehicle refresh</li>
-              <li>Company vehicle cleaning</li>
-              <li>Bulk wash and detail options</li>
-              <li>On-site service available</li>
-              <li>Final vehicle presentation check</li>
-            </ul>
-
-            <p class="package-note">Strong option for lots, fleets, auctions, and staged vehicle groups.</p>
-            <a href="#contact" class="btn btn-secondary package-btn">Request Fleet Quote</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="process">
-      <div class="container process-grid">
-        <div class="process-panel">
-          <div class="section-label">Our Process</div>
-          <h3>Simple booking. Clear service. Clean vehicles.</h3>
-          <p>
-            Whether you need one personal vehicle detailed or a large group of staged vehicles cleaned,
-            Al’s makes the process easy from first contact to final walkaround.
-          </p>
-          <a href="#contact" class="btn btn-primary">Schedule Service</a>
-        </div>
-
-        <div class="steps">
-          <div class="step">
-            <div class="step-number">1</div>
-            <div>
-              <h4>Request Your Service</h4>
-              <p>Choose personal auto detailing, dealership lot cleaning, fleet service, or a custom bulk vehicle request.</p>
-            </div>
-          </div>
-
-          <div class="step">
-            <div class="step-number">2</div>
-            <div>
-              <h4>Confirm Vehicle Count & Location</h4>
-              <p>We confirm the number of vehicles, service location, condition, schedule, and level of cleaning needed.</p>
-            </div>
-          </div>
-
-          <div class="step">
-            <div class="step-number">3</div>
-            <div>
-              <h4>On-Site Vehicle Cleaning</h4>
-              <p>Your vehicle or inventory group receives a focused cleaning process based on your selected service.</p>
-            </div>
-          </div>
-
-          <div class="step">
-            <div class="step-number">4</div>
-            <div>
-              <h4>Final Presentation Check</h4>
-              <p>We finish with a quality check so every vehicle looks clean, sharp, and ready for customers.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="services" id="gallery">
-      <div class="container">
-        <div class="section-heading center">
-          <div class="section-label">Our Work</div>
-          <h2>From personal details to lot-ready vehicle groups.</h2>
-          <p>
-            Replace these blocks with real before-and-after photos once you have them.
-            Add personal car details, dealership inventory rows, fleet photos, and staged vehicle transformations.
-          </p>
-        </div>
-
-        <div class="gallery-grid">
-          <div class="gallery-item tall"></div>
-          <div class="gallery-item"></div>
-          <div class="gallery-item"></div>
-          <div class="gallery-item tall"></div>
-          <div class="gallery-item wide"></div>
-          <div class="gallery-item"></div>
-          <div class="gallery-item"></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="reviews">
-      <div class="container">
-        <div class="section-heading center">
-          <div class="section-label">Customer Experience</div>
-          <h2>Built on trust, repeat customers, and clean results.</h2>
-          <p>
-            These sample reviews can be replaced with real customer feedback as Al’s builds testimonials.
-          </p>
-        </div>
-
-        <div class="cards">
-          <div class="card review-card">
-            <p>
-              “Al’s Detailing brought my car back to life. The interior looked and smelled brand new.”
-            </p>
-            <div class="review-name">— Happy Customer</div>
-          </div>
-
-          <div class="card review-card">
-            <p>
-              “Professional, on time, and the detail was way better than a regular car wash.”
-            </p>
-            <div class="review-name">— Fort Wayne Driver</div>
-          </div>
-
-          <div class="card review-card">
-            <p>
-              “The lot looked cleaner and the vehicles were ready for customers faster.”
-            </p>
-            <div class="review-name">— Dealership Client</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="cta">
-      <div class="container cta-box">
-        <h2>Fort Wayne, keep every vehicle ready.</h2>
-        <p>
-          Book Al’s Detailing for mobile auto detailing, dealership inventory cleaning,
-          fleet vehicle service, and lot-ready results that help every vehicle make a stronger first impression.
-        </p>
-
-        <div class="hero-buttons" style="justify-content: center;">
-          <a href="#contact" class="btn btn-primary">Request Service</a>
-          <a href="tel:2603485609" class="btn btn-secondary">Call Now</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="container contact-grid">
+    <section class="section light">
+      <div class="container intro">
+        <div class="intro-image"><div class="image-label"><strong>From one vehicle to an entire lot</strong><span>Flexible mobile service built around vehicle count and cleaning level.</span></div></div>
         <div>
-          <div class="section-heading">
-            <div class="section-label">Book Now</div>
-            <h2>Ready for cleaner vehicles?</h2>
-            <p>
-              Send your information and Al’s will follow up to confirm your service,
-              vehicle count, location, package, quote needs, and appointment time.
-            </p>
-          </div>
-
-          <div class="contact-info">
-            <div class="info-box">
-              <strong>Phone</strong>
-              <span>(260) 348-5609</span>
-            </div>
-
-            <div class="info-box">
-              <strong>Service Area</strong>
-              <span>Fort Wayne, IN and surrounding areas</span>
-            </div>
-
-            <div class="info-box">
-              <strong>Services</strong>
-              <span>Mobile auto detailing, dealership lot detailing, fleet cleaning, and staged vehicle cleaning</span>
-            </div>
-
-            <div class="info-box">
-              <strong>Hours</strong>
-              <span>Monday–Saturday by appointment</span>
-            </div>
-          </div>
+          <div class="kicker">Local Vehicle Cleaning</div><h2 class="title">A cleaner vehicle makes a stronger first impression.</h2>
+          <p class="copy">Whether you are refreshing your daily driver, staging inventory for customers or maintaining a fleet, Al’s provides a practical path from dirty to clean, sharp and presentation-ready.</p>
+          <ul class="checks"><li>Mobile detailing for cars, trucks and SUVs</li><li>Interior, exterior and full-detail service levels</li><li>Dealership inventory washdowns and lot-ready refreshes</li><li>Bulk cleaning for fleets, auctions, rentals and staged groups</li><li>Recurring schedules for qualifying business accounts</li></ul>
+          <div style="margin-top:28px"><a class="btn btn-black" href="#services">Explore Services</a></div>
         </div>
-
-        <form>
-          <div class="form-grid">
-            <div class="field">
-              <label for="name">Name</label>
-              <input id="name" type="text" placeholder="Your name" />
-            </div>
-
-            <div class="field">
-              <label for="phone">Phone</label>
-              <input id="phone" type="tel" placeholder="Your phone number" />
-            </div>
-
-            <div class="field">
-              <label for="vehicle">Vehicle / Business Type</label>
-              <input id="vehicle" type="text" placeholder="Car, SUV, dealership, fleet, lot, etc." />
-            </div>
-
-            <div class="field">
-              <label for="service">Service Needed</label>
-              <select id="service">
-                <option>Auto Detailing - Tier 1 Basic Wash & Interior Refresh</option>
-                <option>Auto Detailing - Tier 2 Premium Full Detail</option>
-                <option>Auto Detailing - Tier 3 Showroom Deep Detail</option>
-                <option>Dealership Services - Inventory Washdown</option>
-                <option>Dealership Services - Recurring Lot Detail Program</option>
-                <option>Fleet Services - Bulk Vehicle Cleaning</option>
-                <option>Auction / Rental / Staged Vehicle Cleaning</option>
-                <option>Not Sure Yet</option>
-              </select>
-            </div>
-
-            <div class="field full">
-              <label for="message">Message</label>
-              <textarea id="message" placeholder="Tell us about the vehicle, dealership lot, fleet, number of cars, condition, location, and preferred appointment time."></textarea>
-            </div>
-
-            <div class="full">
-              <button type="button" class="btn btn-primary" onclick="sendBooking()">Request Service</button>
-            </div>
-          </div>
-        </form>
       </div>
     </section>
 
+    <section class="section dark" id="services">
+      <div class="container">
+        <div class="kicker">Our Services</div><h2 class="title">Detailing for drivers, dealerships and vehicle-based businesses.</h2><p class="copy">Choose a personal package or request a custom quote for inventory, fleets and high-volume staged vehicles.</p>
+        <div class="service-grid">
+          <article class="service"><span class="service-num">SERVICE 01</span><h3>Mobile Auto Detailing</h3><p>Convenient detailing brought to your vehicle.</p><ul><li>Cars, trucks and SUVs</li><li>At-home or approved on-site service</li><li>Maintenance and deep-detail options</li></ul><a href="#packages">View packages <span>→</span></a></article>
+          <article class="service"><span class="service-num">SERVICE 02</span><h3>Interior Detailing</h3><p>Focused cleaning for buildup, spills, dust and high-touch areas.</p><ul><li>Vacuuming and surface cleaning</li><li>Mats, seats, panels and cupholders</li><li>Condition-based add-ons</li></ul><a href="#quote">Request interior service <span>→</span></a></article>
+          <article class="service"><span class="service-num">SERVICE 03</span><h3>Exterior Detailing</h3><p>Exterior service designed to restore shine and improve presentation.</p><ul><li>Hand wash and dry</li><li>Wheels, tires, glass and trim</li><li>Gloss and protection options</li></ul><a href="#quote">Request exterior service <span>→</span></a></article>
+          <article class="service"><span class="service-num">SERVICE 04</span><h3>Full-Service Details</h3><p>Interior and exterior cleaning combined into a complete reset.</p><ul><li>Personal vehicles</li><li>Resale and special-event prep</li><li>Seasonal cleaning</li></ul><a href="#packages">Compare tiers <span>→</span></a></article>
+          <article class="service"><span class="service-num">SERVICE 05</span><h3>Dealership Lot Detailing</h3><p>Lot-ready cleaning for dealerships and staged inventory.</p><ul><li>Inventory washdowns</li><li>Interior refreshes</li><li>Photo-ready and delivery prep</li></ul><a href="#dealers">Dealer services <span>→</span></a></article>
+          <article class="service"><span class="service-num">SERVICE 06</span><h3>Fleet & Bulk Cleaning</h3><p>Scalable service for fleets, rentals, auctions and large groups.</p><ul><li>Custom vehicle counts</li><li>On-site cleaning</li><li>Quote-based bulk pricing</li></ul><a href="#quote">Request fleet quote <span>→</span></a></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section light" id="packages">
+      <div class="container">
+        <div class="center"><div class="kicker">Personal Vehicle Packages</div><h2 class="title">Choose your level of clean.</h2><p class="copy">Starting prices may change based on vehicle size, condition, pet hair, staining and add-ons.</p></div>
+        <div class="package-grid">
+          <article class="package"><span class="tag">Tier 1</span><h3>Essential Refresh</h3><div class="price">From $75 <small>/ vehicle</small></div><p>A maintenance service for a straightforward interior and exterior refresh.</p><ul><li>Exterior hand wash</li><li>Wheel-face cleaning</li><li>Tire shine</li><li>Interior vacuum</li><li>Dashboard and console wipe</li><li>Window cleaning</li><li>Light fragrance refresh</li></ul><p class="package-note">Best for routine upkeep without heavy buildup removal.</p><button class="btn btn-black select-service" data-service="Auto Detailing - Tier 1 Essential Refresh">Choose Tier 1</button></article>
+          <article class="package featured"><span class="tag">Most Popular</span><h3>Premium Full Detail</h3><div class="price">From $150 <small>/ vehicle</small></div><p>A stronger inside-and-out reset for daily drivers and family vehicles.</p><ul><li>Everything in Tier 1</li><li>Deeper interior vacuum</li><li>Seat and carpet cleaning</li><li>Floor-mat cleaning</li><li>Vents and cupholders detailed</li><li>Door-jamb wipe down</li><li>Wheel and tire deep clean</li><li>Gloss enhancement</li><li>Spray wax or quick sealant</li></ul><p class="package-note">Strong value for most personal vehicles.</p><button class="btn btn-red select-service" data-service="Auto Detailing - Tier 2 Premium Full Detail">Choose Tier 2</button></article>
+          <article class="package"><span class="tag">Tier 3</span><h3>Showroom Deep Detail</h3><div class="price">From $225 <small>/ vehicle</small></div><p>A deeper transformation for neglected vehicles, resale prep or seasonal resets.</p><ul><li>Everything in Tier 2</li><li>Deep stain attention</li><li>Leather or vinyl conditioning</li><li>Trim and crevice cleaning</li><li>Premium exterior wash</li><li>Paint-gloss boost</li><li>Longer-lasting wax or sealant</li><li>Wheel-well cleaning</li><li>Final presentation check</li></ul><p class="package-note">Final pricing depends heavily on condition.</p><button class="btn btn-black select-service" data-service="Auto Detailing - Tier 3 Showroom Deep Detail">Choose Tier 3</button></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dealer" id="dealers">
+      <div class="container dealer-grid">
+        <div><div class="kicker">Dealership & High-Volume Services</div><h2 class="title">Keep every vehicle clean, customer-ready and easier to present.</h2><p class="copy">Al’s supports dealerships, independent lots, rentals, auctions, company fleets and other locations where multiple vehicles are staged. Programs are quoted by vehicle count, frequency, service level, location and turnaround.</p><div style="margin-top:26px;display:flex;flex-wrap:wrap;gap:12px"><button class="btn btn-black select-service" data-service="Dealership Services - Custom Lot Program">Request Dealer Quote</button><a class="btn btn-outline" href="tel:2603485609">Call About Your Lot</a></div></div>
+        <div class="dealer-panel">
+          <div class="dealer-feature"><strong>Inventory Washdowns</strong><span>Exterior cleaning for rows of staged vehicles.</span></div><div class="dealer-feature"><strong>Interior Refreshes</strong><span>Vacuum, glass and surface-cleaning options.</span></div><div class="dealer-feature"><strong>Photo-Ready Prep</strong><span>Priority cleanup before listing photos or delivery.</span></div><div class="dealer-feature"><strong>Recurring Programs</strong><span>Weekly, biweekly or custom schedules.</span></div><div class="dealer-feature"><strong>Fleet Cleaning</strong><span>Company, rental and service vehicles.</span></div><div class="dealer-feature"><strong>Bulk Projects</strong><span>Auction, event, overflow and staged assignments.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark" id="process">
+      <div class="container process">
+        <div class="process-intro"><div class="kicker">How It Works</div><h2 class="title">A clear process from quote to final presentation.</h2><p class="copy">Personal and high-volume jobs follow the same principle: understand the need, confirm the scope, perform the service and check the result.</p><div style="margin-top:25px"><a class="btn btn-red" href="#quote">Start Your Quote</a></div></div>
+        <div class="steps">
+          <article class="step"><span class="step-num">1</span><div><h3>Request a Quote</h3><p>Choose personal detailing, dealership service, fleet cleaning or another staged-vehicle project.</p></div></article>
+          <article class="step"><span class="step-num">2</span><div><h3>Confirm the Scope</h3><p>Confirm vehicle type, count, condition, location, service level and schedule.</p></div></article>
+          <article class="step"><span class="step-num">3</span><div><h3>Schedule On-Site Service</h3><p>Al’s coordinates a workable service window and prepares for the job.</p></div></article>
+          <article class="step"><span class="step-num">4</span><div><h3>Clean & Detail</h3><p>Each vehicle receives the agreed service using an organized process.</p></div></article>
+          <article class="step"><span class="step-num">5</span><div><h3>Final Presentation Check</h3><p>The finished vehicles are reviewed so they look clean, sharp and ready.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section light">
+      <div class="container"><div class="center"><div class="kicker">Why Choose Al’s</div><h2 class="title">Built for convenience, communication and clean presentation.</h2></div><div class="why-grid"><article class="why"><strong>Mobile Convenience</strong><p>Service is arranged around the vehicle location.</p></article><article class="why"><strong>Personal & Bulk Options</strong><p>Choose a consumer package or custom business scope.</p></article><article class="why"><strong>Flexible Scheduling</strong><p>Timing is coordinated around access and volume.</p></article><article class="why"><strong>Consistent Presentation</strong><p>Vehicles look ready to enjoy, photograph, deliver or sell.</p></article><article class="why"><strong>Direct Communication</strong><p>Call or text the business directly.</p></article><article class="why"><strong>Fort Wayne Focus</strong><p>Local service for the surrounding area.</p></article></div></div>
+    </section>
+
+    <section class="section dark" id="about">
+      <div class="container about">
+        <div><div class="kicker">About Al’s Detailing</div><h2 class="title">A local detailing company built to handle bigger vehicle-cleaning needs.</h2><p class="copy">Al’s serves personal vehicle owners while building a specialized business-to-business lane for dealerships, fleets and high-volume staged inventory. The mission is dependable vehicle cleaning, clear communication, flexible options and stronger presentation.</p><p class="copy" style="margin-top:16px">From a single performance car to a dealership row or company fleet, the focus remains the same: understand what the vehicles need and complete the agreed service with care.</p><div style="margin-top:27px;display:flex;flex-wrap:wrap;gap:12px"><a class="btn btn-red" href="#quote">Request Service</a><a class="btn btn-outline" href="tel:2603485609">Call (260) 348-5609</a></div></div>
+        <div class="about-card"><div class="about-img"></div><div><strong>Al’s service promise</strong><p>Clear scope, direct communication, organized service and results built around clean vehicle presentation.</p></div></div>
+      </div>
+    </section>
+
+    <section class="section light" id="gallery">
+      <div class="container"><div class="center"><div class="kicker">Photo Gallery</div><h2 class="title">Show the shine. Show the transformation.</h2><p class="copy">Add real project photos with the filenames shown below. Missing images keep the crimson fallback design.</p></div>
+        <div class="gallery">
+          <div class="gallery-item tall" style="background-image:linear-gradient(to top,rgba(0,0,0,.75),transparent),url('./images/black-challenger-waterdrops.jpg')"><span>Water-bead exterior finish</span></div>
+          <div class="gallery-item" style="background-image:linear-gradient(135deg,rgba(181,18,27,.72),rgba(7,7,7,.78)),url('./images/detail-1.jpg')"><span>Interior transformation</span></div>
+          <div class="gallery-item" style="background-image:linear-gradient(135deg,rgba(7,7,7,.65),rgba(181,18,27,.58)),url('./images/detail-2.jpg')"><span>Wheel and tire finish</span></div>
+          <div class="gallery-item tall" style="background-image:linear-gradient(135deg,rgba(7,7,7,.72),rgba(181,18,27,.5)),url('./images/dealership-lot.jpg')"><span>Dealership inventory</span></div>
+          <div class="gallery-item wide" style="background-image:linear-gradient(135deg,rgba(181,18,27,.66),rgba(7,7,7,.78)),url('./images/fleet-vehicles.jpg')"><span>Fleet and staged vehicle cleaning</span></div>
+          <div class="gallery-item" style="background-image:linear-gradient(135deg,rgba(7,7,7,.72),rgba(181,18,27,.58)),url('./images/detail-3.jpg')"><span>Full-detail finish</span></div>
+          <div class="gallery-item" style="background-image:linear-gradient(135deg,rgba(181,18,27,.65),rgba(7,7,7,.8)),url('./images/detail-4.jpg')"><span>Delivery-ready vehicle</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark" id="reviews">
+      <div class="container"><div class="center"><div class="kicker">Customer Experience</div><h2 class="title">Build the business on review-worthy service.</h2><p class="copy">Replace these promise cards with verified customer reviews as they are collected.</p></div><div class="review-grid"><div class="score"><div class="stars">★★★★★</div><strong>5-Star Service Goal</strong><p>Verified reviews can be added here later.</p></div><div class="review-list"><article class="review"><strong>Clear communication</strong><p>Customers understand service, price range and appointment expectations.</p></article><article class="review"><strong>Respect for vehicles and locations</strong><p>Cars and staged inventory are handled with care.</p></article><article class="review"><strong>Presentation-ready results</strong><p>Vehicles look cleaner and better prepared for use, photography, delivery or sale.</p></article></div></div></div>
+    </section>
+
+    <section class="section dark" id="area">
+      <div class="container area"><div class="area-map"><div class="pin">Fort Wayne</div></div><div><div class="kicker">Service Area</div><h2 class="title">Serving Fort Wayne and nearby communities by appointment.</h2><p class="copy">Availability outside Fort Wayne depends on distance, vehicle count, service type and scheduling. Larger dealership and fleet projects may support a broader radius.</p><div class="chips"><span class="chip">Fort Wayne</span><span class="chip">New Haven</span><span class="chip">Huntertown</span><span class="chip">Leo-Cedarville</span><span class="chip">Auburn</span><span class="chip">Columbia City</span><span class="chip">Decatur</span><span class="chip">Nearby Northeast Indiana</span></div><div style="margin-top:25px"><a class="btn btn-red" href="#quote">Check Your Location</a></div></div></div>
+    </section>
+
+    <section class="section light" id="faq">
+      <div class="container faq"><div><div class="kicker">Frequently Asked Questions</div><h2 class="title">Questions before you schedule?</h2><p class="copy">Call or text Al’s at (260) 348-5609 when the job needs a custom answer.</p></div><div class="faq-list">
+        <details><summary>Do you provide mobile detailing?</summary><p>Yes. Mobile service is available by appointment, subject to location access, weather, scheduling and service type.</p></details>
+        <details><summary>Do you clean dealership inventory?</summary><p>Yes. Services can include inventory washdowns, interior refreshes, photo-ready preparation and recurring programs.</p></details>
+        <details><summary>Can you clean a large number of staged vehicles?</summary><p>Yes. Fleet, auction, rental and staged-vehicle work is quoted by count, condition, service level, location and turnaround.</p></details>
+        <details><summary>How is pricing determined?</summary><p>Personal packages have starting prices. Final pricing can change based on size, condition, pet hair, staining, buildup and add-ons. Business work is custom quoted.</p></details>
+        <details><summary>Do you service areas outside Fort Wayne?</summary><p>Nearby areas may be available by appointment. Travel distance and job size may affect availability and price.</p></details>
+        <details><summary>Can dealerships schedule recurring service?</summary><p>Recurring service may be available after the scope, vehicle volume and schedule are confirmed.</p></details>
+        <details><summary>What should I include in a quote request?</summary><p>Include vehicle type, count, location, desired service, condition concerns and preferred date. Photos can help.</p></details>
+      </div></div>
+    </section>
+
+    <section class="section quote" id="quote">
+      <div class="container quote-grid">
+        <div><div class="kicker">Request a Free Quote</div><h2 class="title">Tell Al’s what needs to be cleaned.</h2><p class="copy">Complete the form and your phone will open a prefilled text message. Review it and tap Send.</p><div class="contact-cards"><div class="contact-card"><strong>Call or Text</strong><a href="tel:2603485609">(260) 348-5609</a></div><div class="contact-card"><strong>Primary Area</strong><span>Fort Wayne, Indiana and nearby communities</span></div><div class="contact-card"><strong>Service Types</strong><span>Personal detailing, dealership inventory, fleets and staged vehicles</span></div><div class="contact-card"><strong>Scheduling</strong><span>Mobile service by appointment</span></div></div></div>
+        <form class="form" id="quoteForm" novalidate><div class="form-grid">
+          <div class="field"><label for="name">Name *</label><input id="name" name="name" required placeholder="Your name"></div>
+          <div class="field"><label for="phone">Phone *</label><input id="phone" name="phone" type="tel" required placeholder="Your phone number"></div>
+          <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" placeholder="Your email address"></div>
+          <div class="field"><label for="customerType">Customer Type *</label><select id="customerType" name="customerType" required><option value="">Choose one</option><option>Personal Vehicle Owner</option><option>Dealership / Car Lot</option><option>Fleet / Company Vehicles</option><option>Rental / Auction / Staged Vehicles</option><option>Other Vehicle-Based Business</option></select></div>
+          <div class="field full"><label for="service">Service Needed *</label><select id="service" name="service" required><option value="">Choose a service</option><option>Auto Detailing - Tier 1 Essential Refresh</option><option>Auto Detailing - Tier 2 Premium Full Detail</option><option>Auto Detailing - Tier 3 Showroom Deep Detail</option><option>Interior Detailing</option><option>Exterior Detailing</option><option>Dealership Services - Inventory Washdown</option><option>Dealership Services - Interior Refresh</option><option>Dealership Services - Photo-Ready Prep</option><option>Dealership Services - Custom Lot Program</option><option>Fleet / Bulk Vehicle Cleaning</option><option>Auction / Rental / Staged Vehicle Cleaning</option><option>Not Sure Yet</option></select></div>
+          <div class="field"><label for="vehicleType">Vehicle / Business Type *</label><input id="vehicleType" name="vehicleType" required placeholder="Car, SUV, dealership, fleet, etc."></div>
+          <div class="field"><label for="vehicleCount">Number of Vehicles</label><input id="vehicleCount" name="vehicleCount" type="number" min="1" placeholder="1"></div>
+          <div class="field"><label for="location">Service Location *</label><input id="location" name="location" required placeholder="City or general location"></div>
+          <div class="field"><label for="preferredDate">Preferred Date</label><input id="preferredDate" name="preferredDate" type="date"></div>
+          <div class="field full"><label for="message">Vehicle Condition / Project Details</label><textarea id="message" name="message" placeholder="Describe condition, lot size, schedule, stains, pet hair or turnaround needs."></textarea></div>
+          <div class="field full"><button class="btn btn-red" type="submit">Prepare Text Quote Request</button><p class="note">The form opens a text message; it does not send automatically.</p><div class="status" id="status" aria-live="polite"></div></div>
+        </div></form>
+      </div>
+    </section>
   </main>
 
-  <footer>
-    <div class="container footer-flex">
-      <div>© 2026 Al’s Detailing. All rights reserved.</div>
-      <div>Fort Wayne, Indiana Auto Detailing & Dealership Lot Services</div>
-    </div>
-  </footer>
+  <footer><div class="container footer-grid"><div><a class="brand" href="#home"><span class="mark">AL</span><span><strong>Al’s Detailing</strong><small>Fort Wayne, Indiana</small></span></a><p style="margin-top:16px;max-width:420px">Mobile detailing, dealership lot services, fleet cleaning and staged vehicle cleaning.</p></div><div><h3>Quick Links</h3><ul class="footer-list"><li><a href="#services">Services</a></li><li><a href="#packages">Packages</a></li><li><a href="#dealers">Dealership Services</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#faq">FAQ</a></li><li><a href="#quote">Request a Quote</a></li></ul></div><div><h3>Contact</h3><ul class="footer-list"><li><a href="tel:2603485609">(260) 348-5609</a></li><li>Fort Wayne, Indiana</li><li>Mobile service by appointment</li><li>Personal, dealership and fleet jobs</li></ul></div></div><div class="container footer-bottom"><span>© <span id="year"></span> Al’s Detailing. All rights reserved.</span><span>Fort Wayne Mobile Detailing & Dealership Vehicle Services</span></div></footer>
+
+  <div class="float"><a href="#quote" aria-label="Request quote">✎</a><a href="tel:2603485609" aria-label="Call Al's Detailing">☎</a></div>
 
   <script>
-    function sendBooking() {
-      const name = document.getElementById("name").value;
-      const phone = document.getElementById("phone").value;
-      const vehicle = document.getElementById("vehicle").value;
-      const service = document.getElementById("service").value;
-      const message = document.getElementById("message").value;
-
-      const businessPhone = "2603485609";
-
-      const text =
-        `New Al's Detailing service request:%0A%0A` +
-        `Name: ${name}%0A` +
-        `Phone: ${phone}%0A` +
-        `Vehicle / Business Type: ${vehicle}%0A` +
-        `Service Needed: ${service}%0A` +
-        `Message: ${message}`;
-
-      window.location.href = `sms:${businessPhone}?body=${text}`;
-    }
+    const menu=document.getElementById('menu'),nav=document.getElementById('navlinks'),form=document.getElementById('quoteForm'),statusBox=document.getElementById('status'),service=document.getElementById('service');
+    menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',open);menu.textContent=open?'✕':'☰';document.body.classList.toggle('menu-open',open)});
+    nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='☰';document.body.classList.remove('menu-open')}));
+    document.querySelectorAll('.select-service').forEach(button=>button.addEventListener('click',()=>{service.value=button.dataset.service;document.getElementById('quote').scrollIntoView({behavior:'smooth'})}));
+    form.addEventListener('submit',event=>{event.preventDefault();statusBox.textContent='';if(!form.checkValidity()){form.reportValidity();statusBox.textContent='Please complete the required fields.';return}const data=new FormData(form);const text=["New Al's Detailing quote request","",`Name: ${data.get('name')}`,`Phone: ${data.get('phone')}`,`Email: ${data.get('email')||'Not provided'}`,`Customer type: ${data.get('customerType')}`,`Service: ${data.get('service')}`,`Vehicle / business type: ${data.get('vehicleType')}`,`Number of vehicles: ${data.get('vehicleCount')||'1 / not specified'}`,`Location: ${data.get('location')}`,`Preferred date: ${data.get('preferredDate')||'Flexible / not specified'}`,`Details: ${data.get('message')||'No additional details'}`].join('\n');const body=encodeURIComponent(text);const apple=/iPhone|iPad|iPod/i.test(navigator.userAgent);statusBox.textContent='Opening your text message. Review it, then tap Send.';window.location.href=apple?`sms:2603485609&body=${body}`:`sms:2603485609?body=${body}`});
+    document.getElementById('year').textContent=new Date().getFullYear();
   </script>
-
 </body>
 </html>
